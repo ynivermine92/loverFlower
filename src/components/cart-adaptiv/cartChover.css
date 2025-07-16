@@ -1,0 +1,14 @@
+.item img:hover{
+    transform: scale(1.1);
+    transition: all 0.3s;
+  }
+  .item img{
+    transform: scale(1);
+    transition: all 0.3s;
+  }
+  
+  .item{
+    display: block;
+    overflow: hidden;
+  
+  }

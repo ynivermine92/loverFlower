@@ -1,0 +1,114 @@
+/ Оголошення функції allCalls у глобальному просторі
+function allCalls(searchKey='', page = 1, perPage = 10) {
+        const baseUrl = "/crm/api/calls/list_all";
+        const url = `${baseUrl}?page=${page}&per_page=${perPage}&search=${searchKey}`;
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Помилка HTTP! Статус: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                renderTable(data.data);
+                renderPagination(data.pagination, searchKey); 
+                document.getElementById('totalItems').innerHTML = `Список дзвінків: ${data.pagination.total_items}`;
+            })
+            .catch(error => {
+                console.error("Помилка отримання дзвінків:", error);
+            });
+    }
+ 
+
+
+
+// Функція для відображення таблиці
+function renderTable(companies) {
+    const tableBody = document.getElementById('companiesTable');
+    tableBody.innerHTML = "";
+    companies.forEach(contragent => {
+        const callButton = `<button class="btn green-link btn-sm" onclick="makeCall('${contragent.number}')">
+    <i class="material-icons">phone_in_talk</i>
+</button>`;
+
+
+    if (contragent.type === 'company') {
+            name = contragent.c_name;
+        } else {
+            name = `${contragent.last_name ?? ''} ${contragent.first_name ?? ''} ${contragent.middle_name ?? ''}`.trim();
+        } 
+        tableBody.innerHTML += `
+            <tr data-contragent-uid="${contragent.uid}">
+                <td class="truncate"> ${contragent.date_created}
+                </td>
+                <td class="truncate">
+                    ${contragent.client_num}
+                    ${callButton}
+                </td>
+                <td class="truncate"></td>
+                <td class="truncate">${contragent.status}</td>
+                <td class="text-center">${contragent.billsec}</td>
+                    
+               
+                   <td class="text-center">
+                  
+                </td>
+                   <td class="text-center">
+                   
+                </td>
+            </tr>
+        `;
+    });
+}
+
+
+
+// Функція для відображення пагінації
+function renderPagination(pagination, searchKey) {
+
+    const paginationTop = document.getElementById('paginationTop');
+    const paginationBottom = document.getElementById('paginationBottom');
+
+    console.log(pagination,searchKey)
+    paginationTop.innerHTML = "";
+    paginationBottom.innerHTML = "";
+
+    const { current_page, total_pages } = pagination;
+
+    // Кнопка "Назад"
+    const prevDisabled = current_page === 1 ? 'disabled' : '';
+    const prevPage = `
+        <li class="page-item ${prevDisabled}">
+            <a class="page-link" href="#" onclick="allCalls('${searchKey}', ${current_page - 1})" aria-label="Previous">
+                <span aria-hidden="true">«</span>
+            </a>
+        </li>`;
+    paginationTop.insertAdjacentHTML('beforeend', prevPage);
+    paginationBottom.insertAdjacentHTML('beforeend', prevPage);
+
+    // Кнопки для сторінок
+    for (let i = 1; i <= total_pages; i++) {
+        const activeClass = i === current_page ? 'active' : '';
+        const pageItem = `
+            <li class="page-item ${activeClass}">
+                <a class="page-link" href="#" onclick="allCalls('${searchKey}', ${i})">${i}</a>
+            </li>`;
+        paginationTop.insertAdjacentHTML('beforeend', pageItem);
+        paginationBottom.insertAdjacentHTML('beforeend', pageItem);
+    }
+
+    // Кнопка "Вперед"
+    const nextDisabled = current_page === total_pages ? 'disabled' : '';
+    const nextPage = `
+        <li class="page-item ${nextDisabled}">
+            <a class="page-link" href="#" onclick="allCalls('${searchKey}', ${current_page + 1})" aria-label="Next">
+                <span aria-hidden="true">»</span>
+            </a>
+        </li>`;
+    paginationTop.insertAdjacentHTML('beforeend', nextPage);
+    paginationBottom.insertAdjacentHTML('beforeend', nextPage);
+}
+
+
+
+

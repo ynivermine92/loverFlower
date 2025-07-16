@@ -1,0 +1,15 @@
+function goHere() {
+  const mouseIcon = document.querySelector('.mouse-icon');
+  const gotoHere = document.querySelector('.goto-here');
+
+  mouseIcon.addEventListener('click', function (event) {
+    event.preventDefault();
+
+    window.scrollTo({
+      top: gotoHere.offsetTop,
+      behavior: 'smooth'
+    });
+  });
+}
+
+goHere();

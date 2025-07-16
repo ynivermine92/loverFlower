@@ -1,0 +1,125 @@
+/* model */
+.modal__wrapper {
+    color: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    display: none;
+  
+  }
+  
+  .modal {
+    background: white;
+    padding: 25px;
+    border-radius: 5px;
+    height: 350px;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .modal__body {
+    width: 100%;
+  }
+  
+  .modal__title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .modal__close {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    right: 30px;
+    top: 24px;
+  }
+  
+  .model__block {
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid black;
+    display: inline-block;
+  }
+  
+  .modal__form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modal__input {
+    padding: 10px 20px;
+    max-width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    margin-bottom: 15px;
+  }
+  
+  .modal__button {
+    padding: 16px 20px;
+    max-width: 100%;
+    margin-top: 30px;
+    border: 1px solid transparent;
+    transition: all 0.9s;
+    color: #fff;
+    background-color: black;
+  }
+  
+  .modal__button:hover {
+    transition: all 0.9s;
+    background: transparent;
+    border: 1px solid black;
+    color: #000;
+  }
+  
+  body.locked {
+    overflow: hidden;
+  }
+  
+  .modalThank__text {
+    text-align: center;
+  }
+  
+  /* nav */
+  .user-nav__verification{
+    position: relative;
+  }
+  .user-nav__ul{
+    display: none;
+    position: absolute;
+    padding: 10px;
+    background-color: rgb(240, 240, 240);
+    transition: all 0.5;
+    left: -50px;
+    top: 30px;
+  }
+  .user-nav__li{
+    cursor: pointer;
+    padding: 10px;
+    color: #000;
+  }
+  .user-nav__li:hover{
+    color: #fe3e57;
+    transition: all 0.5s;
+  }
+  .user-nav__ul.active {
+    display: block;
+  }
+  /* nav */
+  
+  
+  /* model */
+  

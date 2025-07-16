@@ -1,0 +1,71 @@
+
+.slider {
+    padding: 32px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .slider__main-image img {
+    width: 100%;
+    border-radius: 16px;
+  }
+  
+  .slider__thumbs-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slider__thumbs-row {
+    display: flex;
+    gap: 12px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    width: calc(100% - 80px); /* минус кнопки */
+  }
+  
+  .slider__image {
+    flex: 0 0 calc(100% / 3 - 8px); /* 3 в ряд с отступами */
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .slider__image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .thumbs-prev,
+  .thumbs-next {
+    width: 40px;
+    height: 100px;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  .thumbs-prev:hover,
+  .thumbs-next:hover {
+    background-color: #ccc;
+  }
+  
+  .slider__image img.active-thumb {
+    outline: 3px solid #333;
+    border-radius: 8px;
+  }
+
+  .slider__main{
+    display: flex;
+    justify-content: center;
+  }
+  .slider__main .slider__image{
+    max-width: 330px;
+    width: 100%;
+  }

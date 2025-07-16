@@ -1,0 +1,25 @@
+.tabs {
+    width: 100%;
+    margin-top: 150px;
+    &__header,&__header2 {
+        display: flex;
+        justify-content: center;
+        @media (max-width: 768px) {
+            flex-wrap: wrap;
+        }
+        &-item, &-item2{
+            margin: 0 25px;
+            cursor: pointer;
+            &.active {
+                color: red;
+            }
+        }
+    }
+    &__content, &__content2 {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 75px;
+    }
+}
