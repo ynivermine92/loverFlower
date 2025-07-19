@@ -1,5 +1,5 @@
 <section class="home" style="background: url(/img/home/home.jpg)">
-  <header>
+  <header data-aos-duration="2000" data-aos="fade-down">
     <!-- Navbar -->
     <div class="header">
       <div class="container">
@@ -61,13 +61,72 @@
 
   <div class="home__wrapper">
     <div class="conanter">
-      <h1 class="home__title title">lover flower</h1>
-      <p class="home__text">
+      <h1 data-aos="flip-up" data-aos-duration="2000" class="home__title title">lover flower</h1>
+      <p data-aos="flip-up" data-aos-duration="2000" class="home__text">
         Создаём для тех, кто ценит свежесть и изящество цветка
       </p>
-      <div class="home__box">
+      <div data-aos="flip-up" data-aos-duration="2000" class="home__box">
         <a class="home__link" href="#">смотреть каталог</a>
       </div>
     </div>
   </div>
+
+  <div  data-aos="fade-left" data-aos-duration="2000" class="sidebar">
+    <div class="sidebar__wrapper">
+      <div class="sidebar__box">
+        <a class="sidebar__link" href="#">zakaz@gmail.com</a>
+        <span class="sidebar__text"
+          >Доставка 24/7 по договоренности с оператором
+        </span>
+      </div>
+      <div class="sidebar__box">
+        <p class="sidebar__link">ул. Тимирязева 67</p>
+        <span>10:00 до 21:00</span>
+        <span>без выходных</span>
+      </div>
+      <div class="sidebar__cocial-wrapper">
+        <ul class="sidebar__cocial-items">
+          <li class="sidebar__cocial-item">
+            <a class="sidebar__cocial-link" href="#">
+              <svg class="sidebar__cocial-svg">
+                <use xlink:href="img/sidebar/sea.svg#sea"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="sidebar__cocial-item">
+            <a class="sidebar__cocial-link" href="#">
+              <svg class="sidebar__cocial-svg">
+                <use xlink:href="img/sidebar/web.svg#web"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="sidebar__cocial-item">
+            <a class="sidebar__cocial-link" href="#">
+              <svg class="sidebar__cocial-svg">
+                <use xlink:href="img/sidebar/tell.svg#tell"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="sidebar__inner">
+        <a class="sidebar__link" href="tel:+375291136969"
+          >+375 (29) 113-69-69</a
+        >
+        <div class="sidebar__inner-box">
+          <svg class="tell">
+            <use xlink:href="img/sidebar/phone.svg#phone"></use>
+          </svg>
+          <a class="sidebar__link" href="#"> заказать звонок </a>
+        </div>
+        <div class="sidebar__cart-box">
+          <svg class="cart__svg">
+            <use xlink:href="img/sidebar/cart.svg#cart"></use>
+          </svg>
+          <div class="sidebar__cart-sum">0</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+

@@ -5,17 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Index</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/style.min.css" />
   </head>
 
   <body class="main__body">
     <!-- Header -->
 
-    
     <!-- Main Page -->
-    <main>
-       <section class="home" style="background: url(/img/home/home.jpg)">
-  <header>
+    <main><section class="home" style="background: url(/img/home/home.jpg)">
+  <header data-aos-duration="2000" data-aos="fade-down">
     <!-- Navbar -->
     <div class="header">
       <div class="container">
@@ -77,97 +76,79 @@
 
   <div class="home__wrapper">
     <div class="conanter">
-      <h1 class="home__title title">lover flower</h1>
-      <p class="home__text">
+      <h1 data-aos="flip-up" data-aos-duration="2000" class="home__title title">lover flower</h1>
+      <p data-aos="flip-up" data-aos-duration="2000" class="home__text">
         Создаём для тех, кто ценит свежесть и изящество цветка
       </p>
-      <div class="home__box">
+      <div data-aos="flip-up" data-aos-duration="2000" class="home__box">
         <a class="home__link" href="#">смотреть каталог</a>
       </div>
     </div>
   </div>
-</section>
 
-       <section class="home" style="background: url(/img/home/home.jpg)">
-  <header>
-    <!-- Navbar -->
-    <div class="header">
-      <div class="container">
-        <div class="navbar">
-          <div class="logo">
-            <a href="#"> <img src="img/header/logo.png" alt="" /></a>
-          </div>
-          <nav>
-            <ul class="menu">
-              <li class="menu__item">
-                <a href="#" class="menu__item-link" data-scroll>Каталог</a>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__item-link" data-scroll
-                  >Доставка та оплата</a
-                >
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__item-link" data-scroll>Про нас</a>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__item-link" data-scroll>Контакти</a>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__item-link" data-scroll>FAQ</a>
-              </li>
-              <li class="menu__item menu__search">
-                <svg class="menu__search-svg">
-                  <use xlink:href="img/header/searsh.svg#searsh"></use>
-                </svg>
-                <span class="menu__search-text">Пошук</span>
-              </li>
-            </ul>
-          </nav>
-
-          <button class="burger">
-            <span></span>
-          </button>
-        </div>
+  <div  data-aos="fade-left" data-aos-duration="2000" class="sidebar">
+    <div class="sidebar__wrapper">
+      <div class="sidebar__box">
+        <a class="sidebar__link" href="#">zakaz@gmail.com</a>
+        <span class="sidebar__text"
+          >Доставка 24/7 по договоренности с оператором
+        </span>
       </div>
-    </div>
-
-    <div class="search">
-      <div class="conanter">
-        <div class="search__wrarpper">
-          <form class="search__form" action="#">
-            <input class="search__input" placeholder="поиск" />
-            <button class="search__btn">
-              <svg class="menu__search-svg">
-                <use xlink:href="img/header/searsh.svg#searsh"></use>
+      <div class="sidebar__box">
+        <p class="sidebar__link">ул. Тимирязева 67</p>
+        <span>10:00 до 21:00</span>
+        <span>без выходных</span>
+      </div>
+      <div class="sidebar__cocial-wrapper">
+        <ul class="sidebar__cocial-items">
+          <li class="sidebar__cocial-item">
+            <a class="sidebar__cocial-link" href="#">
+              <svg class="sidebar__cocial-svg">
+                <use xlink:href="img/sidebar/sea.svg#sea"></use>
               </svg>
-            </button>
-          </form>
-          <div class="search__btn-clouse">X</div>
-        </div>
+            </a>
+          </li>
+          <li class="sidebar__cocial-item">
+            <a class="sidebar__cocial-link" href="#">
+              <svg class="sidebar__cocial-svg">
+                <use xlink:href="img/sidebar/web.svg#web"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="sidebar__cocial-item">
+            <a class="sidebar__cocial-link" href="#">
+              <svg class="sidebar__cocial-svg">
+                <use xlink:href="img/sidebar/tell.svg#tell"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
-    </div>
-  </header>
-
-  <div class="home__wrapper">
-    <div class="conanter">
-      <h1 class="home__title title">lover flower</h1>
-      <p class="home__text">
-        Создаём для тех, кто ценит свежесть и изящество цветка
-      </p>
-      <div class="home__box">
-        <a class="home__link" href="#">смотреть каталог</a>
+      <div class="sidebar__inner">
+        <a class="sidebar__link" href="tel:+375291136969"
+          >+375 (29) 113-69-69</a
+        >
+        <div class="sidebar__inner-box">
+          <svg class="tell">
+            <use xlink:href="img/sidebar/phone.svg#phone"></use>
+          </svg>
+          <a class="sidebar__link" href="#"> заказать звонок </a>
+        </div>
+        <div class="sidebar__cart-box">
+          <svg class="cart__svg">
+            <use xlink:href="img/sidebar/cart.svg#cart"></use>
+          </svg>
+          <div class="sidebar__cart-sum">0</div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-    </main>
+ </main>
     <!-- Footer -->
     
   </body>
-
-
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="./js/scripts.min.js"></script>
 </html>
