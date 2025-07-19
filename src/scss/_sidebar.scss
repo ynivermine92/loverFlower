@@ -1,9 +1,8 @@
 .sidebar {
     max-width: 300px;
-    position: relative;
-    top: -6%;
-    right: -70%;
-    z-index: -100;
+    position: absolute;
+    top: 4.4%;
+    right: 15%;
 
     &__link {
         font-size: 18px;
@@ -154,7 +153,8 @@
         transition: all 0.6s;
         position: relative;
     }
-    .cart-sum{
+
+    .cart-sum {
         position: absolute;
         height: 12px;
         width: 12px;

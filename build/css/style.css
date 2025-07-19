@@ -353,6 +353,7 @@ body.dark {
   top: -94px;
   padding: 20px;
   width: 100%;
+  z-index: 10;
 }
 
 .search__wrarpper {
@@ -489,10 +490,9 @@ body.dark {
 
 .sidebar {
   max-width: 300px;
-  position: relative;
-  top: -6%;
-  right: -70%;
-  z-index: -100;
+  position: absolute;
+  top: 4.4%;
+  right: 15%;
 }
 
 .sidebar__link {
