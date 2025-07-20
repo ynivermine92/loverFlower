@@ -15,6 +15,11 @@
     display: flex;
     align-items: center;
     padding: 20px 0;
+
+    &.active {
+        display: flex;
+        justify-content: end;
+    }
 }
 
 .logo {
@@ -30,7 +35,10 @@
     display: flex;
     gap: 50px;
 
-    // .menu__item
+    .menu__search-mob {
+        display: none;
+    }
+
     &__item {
         display: flex;
         position: relative;
@@ -125,6 +133,16 @@
             animation: fade 0.1s linear;
         }
     }
+
+    &__item-mob {
+        display: none;
+    }
+
+    @media (max-width: 1200px) {
+        & {
+            gap: 28px;
+        }
+    }
 }
 
 // ========================= [ Burger styles ] =========================
@@ -132,6 +150,24 @@
     display: none;
     background: transparent;
     z-index: 3;
+
+    &:hover {
+
+        &::after {
+            background: #43ffd2;
+            transition: all 0.5;
+        }
+
+        &:before {
+            background: #43ffd2;
+            transition: all 0.5;
+        }
+
+        span {
+            background: #ff1894;
+            transition: all 0.5;
+        }
+    }
 
     @media screen and (max-width: $burgerBreakpoint) {
         display: flex;
@@ -141,21 +177,38 @@
 
         &.active {
             &:before {
-                background: $burgerActiveColor;
+                background: #ff1894;
                 transform: rotate(45deg);
                 transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
                 top: 8px;
+                transition: all 0.5s;
             }
 
             &:after {
-                background: $burgerActiveColor;
+                background: #43ffd2;
                 transform: rotate(-45deg);
                 bottom: 10px;
                 transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
+                transition: all 0.5s;
+
+
             }
 
             & span {
                 transform: scale(0);
+            }
+
+            &.active:hover {
+                &:after {
+                    background: #ff1894;
+                    transition: all 0.5s;
+
+                }
+
+                &:before {
+                    background: #43ffd2;
+                    transition: all 0.5s;
+                }
             }
         }
 
@@ -187,5 +240,66 @@
             transform: scale(1);
             transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all;
         }
+
     }
+
+}
+
+@media (max-width: 990px) {
+
+    .menu {
+        .menu__search-mob {
+            display: block;
+        }
+
+        .menu__search-desktop {
+            display: none;
+        }
+
+        .menu__search-svg {
+            margin-right: 0px;
+        }
+
+        &__item-mob {
+            display: block;
+        }
+
+        .sidebar__box {
+            display: block;
+
+            span {
+                color: #fff;
+            }
+        }
+
+        .sidebar__link {
+            display: block;
+            text-align: center;
+        }
+
+        .menu__iten-wrapper {
+            color: #FFF;
+        }
+
+        .sidebar__cocial-items {
+            display: flex;
+            gap: 10px;
+            padding: 0;
+            align-items: start;
+        }
+
+        .sidebar__cocial-item+.sidebar__cocial-item {
+            margin: 0;
+        }
+
+
+    }
+
+    .logo {
+        margin-right: 20px;
+    }
+
+
+
+
 }

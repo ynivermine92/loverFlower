@@ -19,15 +19,24 @@ function burgerMenu() {
     const burger = document.querySelector('.burger')
     const menu = document.querySelector('.menu')
     const body = document.querySelector('body')
+    const homeTitle = document.querySelector('.home__wrapper')
+    const cart = document.querySelector('.sidebar__cart-box')
+    const navbar = document.querySelector('.navbar')
     burger.addEventListener('click', () => {
         if (!menu.classList.contains('active')) {
             menu.classList.add('active')
             burger.classList.add('active')
             body.classList.add('locked')
+            homeTitle.style.display = 'none';
+            cart.style.display = 'none'
+            navbar.classList.add('active')
         } else {
             menu.classList.remove('active')
             burger.classList.remove('active')
             body.classList.remove('locked')
+            navbar.classList.remove('active')
+            homeTitle.style.display = 'block';
+            cart.style.display = 'block'
         }
     })
 
@@ -36,6 +45,9 @@ function burgerMenu() {
             menu.classList.remove('active')
             burger.classList.remove('active')
             body.classList.remove('locked')
+
+
+
         }
     })
 }
@@ -60,7 +72,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const search = () => {
         const searchBtn = document.querySelector('.search__btn-clouse');
         const search = document.querySelector('.search');
-        const searchImage = document.querySelector('.menu__search');
+        const searchImage = document.querySelectorAll('.menu__search');
 
         const sidebar = document.querySelector('.sidebar');
 
@@ -69,10 +81,13 @@ window.addEventListener('DOMContentLoaded', () => {
             search.classList.remove('active')
             sidebar.style.zIndex = '1';
         })
-        searchImage.addEventListener('click', () => {
-            search.classList.add('active')
-            sidebar.classList.add('active')
-            sidebar.style.zIndex = '-1';
+
+        searchImage.forEach((item) => {
+            item.addEventListener('click', () => {
+                search.classList.add('active')
+                sidebar.classList.add('active')
+                sidebar.style.zIndex = '-1';
+            })
         })
     }
     search();
@@ -80,7 +95,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
-    AOS.init();
+    AOS.init({
+        offset: 0,    // уменьшает смещение анимации
+        once: true    // анимация один раз, не пересчитывается
+    });
 
 
 

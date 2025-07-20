@@ -4,6 +4,10 @@
     top: 4.4%;
     right: 15%;
 
+    &__wrapper {
+        margin-top: 2px;
+    }
+
     &__link {
         font-size: 18px;
         @extend %os-400;
@@ -161,4 +165,61 @@
         font-size: 12px;
         @extend %os-400;
     }
+
+
+
+    @media (max-width: 1500px) {
+        & {
+            right: 10%;
+        }
+    }
+
+    @media (max-width: 1350px) {
+        & {
+            &__text {
+                max-width: 160px;
+            }
+        }
+    }
+
+    @media (max-width: 990px) {
+        & {
+            top: 2%;
+
+            &__box,
+            &__cocial-items,
+            &__link,
+            .tell {
+                display: none;
+            }
+
+            &__inner {
+                margin-top: 0px;
+                flex-direction: unset;
+            }
+
+            &__cocial-wrapper {
+                margin-top: 0px;
+            }
+
+            &__inner-box {
+                padding: 0;
+            }
+        }
+    }
+
+     @media (max-width: 660px) {
+        & {
+            right: 0%;
+        }
+    }
+
+
+
+
+
+
+
+
+
 }

@@ -3,15 +3,24 @@ function burgerMenu() {
     const burger = document.querySelector('.burger')
     const menu = document.querySelector('.menu')
     const body = document.querySelector('body')
+    const homeTitle = document.querySelector('.home__wrapper')
+    const cart = document.querySelector('.sidebar__cart-box')
+    const navbar = document.querySelector('.navbar')
     burger.addEventListener('click', () => {
         if (!menu.classList.contains('active')) {
             menu.classList.add('active')
             burger.classList.add('active')
             body.classList.add('locked')
+            homeTitle.style.display = 'none';
+            cart.style.display = 'none'
+            navbar.classList.add('active')
         } else {
             menu.classList.remove('active')
             burger.classList.remove('active')
             body.classList.remove('locked')
+            navbar.classList.remove('active')
+            homeTitle.style.display = 'block';
+            cart.style.display = 'block'
         }
     })
 
@@ -20,6 +29,9 @@ function burgerMenu() {
             menu.classList.remove('active')
             burger.classList.remove('active')
             body.classList.remove('locked')
+
+
+
         }
     })
 }
