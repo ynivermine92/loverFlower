@@ -28,8 +28,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     AOS.init({
-        offset: 0,    // уменьшает смещение анимации
-        once: true    // анимация один раз, не пересчитывается
+        offset: 0,    
+        once: true    
     });
 
 

@@ -6,6 +6,8 @@ function burgerMenu() {
     const homeTitle = document.querySelector('.home__wrapper')
     const cart = document.querySelector('.sidebar__cart-box')
     const navbar = document.querySelector('.navbar')
+
+
     burger.addEventListener('click', () => {
         if (!menu.classList.contains('active')) {
             menu.classList.add('active')
@@ -39,13 +41,20 @@ burgerMenu()
 
 
 function fixedHeader() {
+    const sidebar = document.querySelector('.sidebar')
     const nav = document.querySelector('.header')
+    const userBlock = document.querySelector('.header__user-items')
+
 
     const breakpoint = 1
     if (window.scrollY >= breakpoint) {
         nav.classList.add('fixed')
+        sidebar.style.opacity = 0;
+        userBlock.classList.add('active')
     } else {
         nav.classList.remove('fixed')
+        sidebar.style.opacity = 1;
+        userBlock.classList.remove('active')
     }
 }
 window.addEventListener('scroll', fixedHeader)

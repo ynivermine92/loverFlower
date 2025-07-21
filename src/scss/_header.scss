@@ -1,14 +1,55 @@
 // ========================= [ Header styles ] =========================
-.header {
-    background-color: transparent;
 
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+
+}
+
+.header {
     &.fixed {
         position: fixed;
+        background: rgb(0, 0, 0);
         left: 0;
         top: 0;
         width: 100%;
         z-index: 2;
     }
+
+    .cart__svg {
+        height: 30px;
+        width: 30px;
+        fill: #fff;
+        transition: all 0.5s;
+        position: relative;
+
+        &:hover {
+            fill: #43ffd2;
+            transition: all 0.5s;
+        }
+    }
+
+    &__user-items {
+        display: flex;
+        opacity: 0;
+        transform: translateY(-10px);
+        /* немного сдвинут вверх */
+        visibility: hidden;
+        align-items: center;
+        gap: 37px;
+        transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
+
+        &.active {
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+        }
+    }
+
+
 }
 
 .navbar {
@@ -33,7 +74,8 @@
 // ========================== [ Menu styles ] ==========================
 .menu {
     display: flex;
-    gap: 50px;
+    gap: 40px;
+    margin-right: 70px;
 
     .menu__search-mob {
         display: none;
@@ -299,7 +341,18 @@
         margin-right: 20px;
     }
 
+    .header {
+        & .sidebar__cart-box {
+            display: block;
+        }
+
+    }
 
 
 
+}
+
+.header__user-items .sidebar__cart-sum {
+    top: -4px;
+    right: -7px;
 }

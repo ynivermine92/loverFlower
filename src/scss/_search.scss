@@ -8,8 +8,8 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   position: fixed;
-  top: -94px;
-  padding: 20px;
+  top: -115px;
+  padding: 34px 20px;
   width: 100%;
   z-index: 10;
 
@@ -64,7 +64,7 @@
     max-width: 100%;
     position: absolute;
     right: 4%;
-    top: 35%;
+    top: 40%;
     font-size: 26px;
     transition: all 0.5s;
 
@@ -79,4 +79,14 @@
 .search.active {
   top: 0;
   transition: all 0.9s;
+
+}
+
+
+@media (max-width: 660px) {
+  .search__wrarpper {
+    padding: 0 20px;
+  }
+
+
 }
