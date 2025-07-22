@@ -2,6 +2,7 @@
     margin-top: 100px;
     margin-bottom: 200px;
     position: relative;
+
     h2 {
         font-size: 100px;
         @extend %co-400;
@@ -13,10 +14,9 @@
     }
 
     &__wrapper {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: 30px;
-        flex-wrap: wrap;
-
     }
 
     &__text {
@@ -64,7 +64,6 @@
         max-width: 435px;
         width: 100%;
         height: 282px;
-   /*      position: relative; */
     }
 
     &__box:nth-child(3) {
@@ -74,7 +73,7 @@
     }
 
     &__box:nth-child(4) {
-        margin-top: 92px;
+        margin-top: 60px;
         max-width: 520px;
         width: 100%;
         height: 264px;
@@ -149,4 +148,60 @@
         z-index: -1;
     }
 
+}
+
+
+@media (max-width: 900px) {
+    .catalog {
+        h2 {
+            font-size: 55px;
+        }
+
+        &__text {
+            margin-left: 40px;
+        }
+
+        &__box:nth-child(2) {
+            top: 158px;
+
+        }
+    }
+}
+
+@media (max-width: 660px) {
+    .catalog {
+        padding: 50px 0;
+        margin: 0;
+
+        &__wrapper {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .catalog__box:nth-child(2),
+        .catalog__box:nth-child(3),
+        .catalog__box:nth-child(4) {
+            top: 0px;
+            max-width: 100%;
+            margin: 0;
+        }
+
+        &__text,
+        &__item {
+            font-size: 16px;
+        }
+        & h2{
+            font-size: 50px;
+        }
+        & h3 {
+            font-size: 25px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .catalog {
+        &__box {
+            padding: 15px;
+        }
+    }
 }

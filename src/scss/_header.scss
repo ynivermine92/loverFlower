@@ -32,6 +32,17 @@ header {
         }
     }
 
+    &__cart-box {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 22%;
+
+        &.active {
+            display: block;
+        }
+    }
+
     &__user-items {
         display: flex;
         opacity: 0;
@@ -182,7 +193,13 @@ header {
 
     @media (max-width: 1200px) {
         & {
-            gap: 28px;
+            gap: 25px;
+        }
+    }
+
+    @media (max-width: 1050px) {
+        & {
+            gap: 18px;
         }
     }
 }
@@ -288,6 +305,16 @@ header {
 }
 
 @media (max-width: 990px) {
+    .header {
+        .sidebar__link {
+            display: block;
+            margin-bottom: 0px;
+        }
+        .header__user-items{
+            margin-left: 24px;
+        }
+    }
+
 
     .menu {
         .menu__search-mob {
