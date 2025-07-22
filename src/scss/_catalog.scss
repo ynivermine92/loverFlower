@@ -131,6 +131,10 @@
         background: rgb(125, 34, 83);
         bottom: 30%;
         z-index: -2;
+        /*   --- */
+        width: 90vw;
+        height: 20vw;
+        filter: blur(15vw);
 
     }
 
@@ -146,6 +150,10 @@
         right: 0%;
         bottom: 30%;
         z-index: -1;
+        /*   --- */
+        width: 90vw;
+        height: 20vw;
+        filter: blur(15vw);
     }
 
 }
@@ -164,6 +172,22 @@
         &__box:nth-child(2) {
             top: 158px;
 
+        }
+
+        &::before,
+        &::after {
+            width: 90vw;
+            height: 20vw;
+            filter: blur(15vw);
+        }
+
+        &::after {
+            top: 0;
+        }
+
+        &::before {
+            transform: rotate(133deg);
+            bottom: 0;
         }
     }
 }
@@ -189,9 +213,11 @@
         &__item {
             font-size: 16px;
         }
-        & h2{
+
+        & h2 {
             font-size: 50px;
         }
+
         & h3 {
             font-size: 25px;
         }
