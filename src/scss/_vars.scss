@@ -86,3 +86,55 @@ $fontSecondary: '';
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
   }
 }
+
+
+
+
+
+
+    %btnSlider {
+        box-sizing: border-box;
+        border: 0.5px solid rgb(255, 255, 255);
+        padding: 16px 78px;
+        font-size: 12px;
+        letter-spacing: 10%;
+        color: rgb(255, 255, 255);
+        @extend %os-700;
+        display: block;
+        max-width: 220px;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        transition: all 0.5s;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -75%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(120deg,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 0.4) 50%,
+                    rgba(255, 255, 255, 0) 100%);
+            transform: skewX(-20deg);
+            transition: left 0.6s ease;
+        }
+
+        &:hover::after {
+            left: 130%;
+        }
+
+        &:hover {
+            background: #7D2253; 
+            border-color: transparent;
+
+        }
+    }
+
+
+
+    
+
+

@@ -100,7 +100,6 @@ function fixedHeader() {
 window.addEventListener('scroll', fixedHeader)
 
 
-
 window.addEventListener('DOMContentLoaded', () => {
     const search = () => {
         const searchBtn = document.querySelector('.search__btn-clouse');
@@ -129,9 +128,48 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     AOS.init({
-        offset: 0,    
-        once: true    
+        offset: 0,
+        once: true
     });
+
+
+
+
+
+
+    let swiper;
+
+    function initSwiper() {
+        if (window.innerWidth > 450) {
+            if (!swiper) {
+                swiper = new Swiper('.swiper', {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                    pagination: {
+                        el: '.swiper-pagination',
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    scrollbar: {
+                        el: '.swiper-scrollbar',
+                    },
+                });
+            }
+        } else {
+            if (swiper) {
+                swiper.destroy(true, true); 
+                swiper = null;
+            }
+        }
+    }
+
+    // Запускаем при загрузке и ресайзе
+    window.addEventListener('load', initSwiper);
+    window.addEventListener('resize', initSwiper);
+
+
 
 
 

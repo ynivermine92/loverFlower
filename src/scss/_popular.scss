@@ -1,0 +1,62 @@
+.popular {
+    padding: 180px 0;
+
+    &__wrapper {}
+
+    &__title {
+        font-size: 100px;
+        @extend %co-400;
+        line-height: 1.4em;
+        text-align: left;
+        text-transform: uppercase;
+        color: rgb(255, 255, 255);
+
+    }
+
+    &__sub-title {
+        margin-top: 20px;
+        margin-bottom: 86px;
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        @extend %os-300;
+    }
+
+    &__side {
+        text-align: center;
+        display: block;
+    }
+
+    &__sub-title {
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 990px) {
+    .popular {
+        &__title {
+            font-size: 72px
+        }
+    }
+
+
+    @media (max-width: 660px) {
+        .popular {
+            padding: 50px 0;
+
+            &__title {
+                font-size: 40px
+            }
+
+            &__sub-title {
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+
+
+
+
+
+}

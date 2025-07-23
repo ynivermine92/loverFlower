@@ -114,6 +114,13 @@
         letter-spacing: 10%;
         border-bottom: 1px solid rgb(217, 120, 172);
         margin-top: 24px;
+        transition: all 0.5s;
+
+        &:hover {
+            transition: all 0.5s;
+            color: #43ffd2;
+            border-bottom: 1px solid #43ffd2;
+        }
     }
 
 
