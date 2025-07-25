@@ -738,6 +738,7 @@ button.swiper-pagination-bullet {
     &__cart {
         @extend %btnSlider;
         text-decoration: none;
+        padding: 16px 76px;
 
     }
 

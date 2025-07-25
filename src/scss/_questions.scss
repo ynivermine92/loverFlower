@@ -1,0 +1,194 @@
+.questions {
+    position: relative;
+
+    &::after {
+        /*   content: "";
+        background: url(/img/questions/questions.png);
+        position: absolute;
+        -o-object-fit: cover;
+        object-fit: cover;
+        background-size: 100%;
+        background-position: left, center;
+        background-repeat: no-repeat;
+        max-width: 100%;
+        width: 70%;
+        height: 600px;
+        top: 0%; */
+
+        content: "";
+        background: url(/img/questions/questions.png);
+        position: absolute;
+        -o-object-fit: cover;
+        object-fit: cover;
+        background-size: 100%;
+        background-position: left, center;
+        background-repeat: no-repeat;
+        max-width: 100%;
+        width: 1143px;
+        height: 1468px;
+        top: -54%;
+    }
+
+
+&__inner {
+    background: #0F2222;
+}
+
+&__wrapper {
+    display: flex;
+    padding-bottom: 90px;
+
+}
+
+&__title {
+    padding-top: 22px;
+    @extend %title-r;
+
+    span+span {
+        text-align: center;
+    }
+}
+
+&__signature {
+    position: absolute;
+    width: 305px;
+    height: 120px;
+    top: 50%;
+    left: 20%;
+    transform: rotate(-18.44deg);
+}
+
+&__box {
+    margin-top: 62px;
+    max-width: 445px;
+    width: 100%;
+}
+
+&__box-box {
+    display: flex;
+    justify-content: end;
+}
+
+&__box-text {
+    padding-top: 52px;
+    max-width: 255px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 1.3rem;
+    @extend %os-400;
+    color: rgb(255, 255, 255);
+    letter-spacing: 4%;
+    text-align: left;
+    text-transform: uppercase;
+    border-top: 1px solid rgb(67, 255, 210);
+}
+
+&__form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+&__input {
+    z-index: 10;
+    padding: 19px 20px;
+    box-sizing: border-box;
+    border: 1px solid rgb(67, 255, 210);
+    background: #0F2222;
+    color: rgb(255, 255, 255);
+
+    &::placeholder {
+        color: rgb(57, 89, 89);
+        @extend %os-400;
+        font-size: 14px;
+        letter-spacing: 4%;
+        text-transform: uppercase;
+    }
+}
+
+&__textarea {
+    z-index: 10;
+    height: 120px;
+    background: #0F2222;
+    box-sizing: border-box;
+    border: 1px solid rgb(67, 255, 210);
+    padding: 19px 20px;
+    color: rgb(255, 255, 255);
+
+    &::placeholder {
+        color: rgb(57, 89, 89);
+        @extend %os-400;
+        font-size: 14px;
+        letter-spacing: 4%;
+        text-transform: uppercase;
+
+    }
+}
+
+&__form-link {
+    z-index: 10;
+    @extend %btn;
+    padding: 16px 93px;
+    margin-top: 20px;
+
+}
+}
+
+@media (max-width: 1050px) {
+    .questions {
+        &__wrapper {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+
+
+
+
+@media (max-width: 990px) {
+    .questions {
+        &__title {
+            font-size: 72px;
+        }
+    }
+}
+
+@media (max-width: 668px) {
+    .questions {
+        &::after {
+            content: "";
+            background: url(/img/questions/questions-mob.png);
+            position: absolute;
+            -o-object-fit: cover;
+            object-fit: cover;
+            background-size: 100%;
+            background-position: left, center;
+            background-repeat: no-repeat;
+            max-width: 100%;
+            width: 70%;
+            top: 0%;
+            height: 410px;
+            right: 0;
+        }
+
+        &__title {
+            font-size: 39px;
+        }
+
+        &__box-box {
+            justify-content: start;
+        }
+
+        &__box {
+            margin-top: 115ps;
+        }
+
+        &__box-text {
+            padding-top: 22px;
+            z-index: 1;
+        }
+    }
+
+}

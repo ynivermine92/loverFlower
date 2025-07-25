@@ -1,5 +1,5 @@
 .order {
-    padding: 180px 0;
+    padding-top: 180px;
     position: relative;
     &__flower {
         position: absolute;
@@ -14,15 +14,7 @@
     }
 
     &__title {
-        font-size: 100px;
-        @extend %co-400;
-        line-height: 1.4em;
-        text-align: left;
-        text-transform: uppercase;
-        color: rgb(255, 255, 255);
-        margin-bottom: 15px;
-        display: flex;
-        flex-direction: column;
+      @extend %title-l;
     }
 
     &__items {
@@ -185,6 +177,12 @@
 
         &__flower {
             display: block;
+        }
+        &__title{
+            font-size: 39px;
+            span + span{
+                text-align: center;
+            }
         }
     }
 }
