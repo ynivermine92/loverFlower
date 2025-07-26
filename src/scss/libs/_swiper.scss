@@ -773,6 +773,14 @@ button.swiper-pagination-bullet {
 
 }
 
+@media (max-width: 1350px) {
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none !important;
+    }
+}
+
 @media (max-width: 990px) {
     .swiper {
         &__cart {
@@ -794,8 +802,17 @@ button.swiper-pagination-bullet {
         flex-direction: column;
         align-items: center;
     }
-    .swiper-slide + .swiper-slide{
+
+    .swiper-slide {
+        max-width: 100%;
+    }
+
+    .swiper-slide+.swiper-slide {
         margin: 40px 0;
     }
-        
+
+    .swiper__link-arrow {
+        margin-top: 0;
+    }
+
 }

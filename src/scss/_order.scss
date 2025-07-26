@@ -1,6 +1,7 @@
 .order {
     padding-top: 180px;
     position: relative;
+
     &__flower {
         position: absolute;
         display: none;
@@ -14,7 +15,7 @@
     }
 
     &__title {
-      @extend %title-l;
+        @extend %title-l;
     }
 
     &__items {
@@ -178,36 +179,40 @@
         &__flower {
             display: block;
         }
-        &__title{
+
+        &__title {
             font-size: 39px;
-            span + span{
+
+            span+span {
                 text-align: center;
             }
         }
     }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 1350px) {
     .order {
-        &__items {
-            &::before {
-                width: 200px;
-                height: 160px;
-                bottom: -5%;
-                filter: blur(60px);
-            }
+        &__image {
+            right: 0;
         }
     }
-
 }
 
 
 @media (max-width: 550px) {
     .order {
         padding: 50px 0;
+
         &__items {
             &::after {
                 margin-left: 160px;
+            }
+
+            &::before {
+                width: 200px;
+                height: 160px;
+                bottom: -5%;
+                filter: blur(60px);
             }
         }
 

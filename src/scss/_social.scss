@@ -1,3 +1,146 @@
 .social {
-    padding: 262px  166px 200px 166px;
+    position: relative;
+    /* обязательно для позиционирования ::after */
+    padding: 262px 0 200px 0px;
+    z-index: 1;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('/img/social/social.png');
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: center;
+        z-index: -1;
+        background-size: cover;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__items {
+        display: flex;
+        gap: 30px;
+    }
+
+    &__item {
+        max-width: 160px;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+        margin-top: -3;
+    }
+
+    &__box-wrapper {
+        max-width: 350px;
+        width: 100%;
+        margin-top: -82px;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__box {
+        ul {
+            margin-top: 52px;
+            display: flex;
+            justify-content: end;
+        }
+    }
+}
+
+@media (max-width:1100px) {
+    .social {
+        padding-bottom: 100px;
+
+        &__wrapper {
+            flex-direction: column-reverse;
+        }
+
+        &__box {
+            margin-left: 0;
+            flex-direction: unset;
+            justify-content: center;
+        }
+
+        &__box-wrapper {
+            margin-top: 0;
+        }
+
+        &__inner {
+            ul {
+                justify-content: center;
+                gap: 14px;
+            }
+        }
+
+        &__box {
+            ul {
+                gap: 14px;
+            }
+        }
+    }
+}
+
+@media (max-width:668px) {
+    .social {
+        padding-top: 30px;
+        padding-bottom: 100px;
+
+        &::after {
+            background-image: unset;
+            filter: blur(100px);
+            background: rgb(125, 34, 83);
+            transform: rotate(32.83deg);
+            width: 188.75px;
+            height: 193.69px;
+            right: 0%;
+            left: unset;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 258.32px;
+            height: 106.64px;
+            filter: blur(100px);
+            background: rgb(67, 255, 210);
+            z-index: -1;
+        }
+
+        &__inner {
+            ul {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                justify-items: center;
+                gap: 20px;
+
+                li {
+                    width: 100%;
+                    max-width: 100%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+    }
 }
