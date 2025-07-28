@@ -101,28 +101,12 @@
     .social {
         padding-top: 30px;
         padding-bottom: 100px;
-
         &::after {
             background-image: unset;
-            filter: blur(100px);
-            background: rgb(125, 34, 83);
-            transform: rotate(32.83deg);
-            width: 188.75px;
-            height: 193.69px;
-            right: 0%;
-            left: unset;
         }
 
         &::before {
             content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 258.32px;
-            height: 106.64px;
-            filter: blur(100px);
-            background: rgb(67, 255, 210);
-            z-index: -1;
         }
 
         &__inner {
