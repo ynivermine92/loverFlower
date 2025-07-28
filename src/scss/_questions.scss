@@ -37,12 +37,13 @@
 &__wrapper {
     display: flex;
     padding-bottom: 90px;
+    padding-top: 30px;
 
 }
 
 &__title {
     padding-top: 22px;
-    @extend %title-r;
+
 
     span+span {
         text-align: center;

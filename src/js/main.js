@@ -58,18 +58,26 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         } else {
             if (swiper) {
-                swiper.destroy(true, true); 
+                swiper.destroy(true, true);
                 swiper = null;
             }
         }
     }
 
-    // Запускаем при загрузке и ресайзе
+
     window.addEventListener('load', initSwiper);
     window.addEventListener('resize', initSwiper);
 
 
+    const headerLocalHome = () => {
+        const isHome = location.pathname === '/' || location.pathname.endsWith('index.html');
+        const header = document.querySelector('header');
 
-
-
+        if (isHome) {
+            header.classList.add('home-header');
+        } else {
+            header.classList.remove('home-header');
+        }
+    }
+    headerLocalHome()
 })
