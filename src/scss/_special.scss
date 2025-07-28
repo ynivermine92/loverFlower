@@ -82,6 +82,7 @@
     &__link {
         @extend %btn;
         padding: 16px 18px;
+        z-index: 2;
     }
 
     &__arrow {
