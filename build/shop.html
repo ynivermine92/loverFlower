@@ -11,7 +11,7 @@
 
   <body class="shop" style="background-image: url(/img/shop/catalog-top.png)">
     <!-- Header -->
-    <header>
+          <header>
   <!-- Navbar -->
   <div class="header" data-aos-duration="2000" data-aos="fade-down">
     <div class="container">
@@ -150,7 +150,359 @@
 
     <!-- Main Page -->
     <main>
-          
+          <section class="top">
+    <div class="container">
+      <div class="bredcrumbs">
+        <ul class="bredcrumbs__list">
+          <li class="bredcrumbs__item">
+            <a class="bredcrumbs__link" href="#">Главная</a>
+          </li>
+          <li class="bredcrumbs__item">
+            <a class="bredcrumbs__link" href="#">Каталог</a>
+          </li>
+        </ul>
+      </div>
+  <div class="top__wrapper">
+      <h2 class="title title__l"><span>Каталог</span><span>Букетов</span></h2>
+      <div class="top__box">
+        <p class="top__text">
+          В нашем магазине самый большой выбор букетов для любых событий:
+        </p>
+      </div>
+    </div>
+
+    <div data-aos="fade-left" data-aos-duration="2000" class="sidebar">
+      <div class="sidebar__wrapper">
+        <div class="sidebar__box">
+          <a class="sidebar__link" href="#">zakaz@gmail.com</a>
+          <span class="sidebar__text"
+            >Доставка 24/7 по договоренности с оператором
+          </span>
+        </div>
+        <div class="sidebar__box">
+          <p class="sidebar__link">ул. Тимирязева 67</p>
+          <span>10:00 до 21:00</span>
+          <span>без выходных</span>
+        </div>
+        <div class="sidebar__cocial-wrapper">
+          <ul class="sidebar__cocial-items">
+            <li class="sidebar__cocial-item">
+              <a class="sidebar__cocial-link" href="#">
+                <svg class="sidebar__cocial-svg">
+                  <use xlink:href="img/sidebar/sea.svg#sea"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="sidebar__cocial-item">
+              <a class="sidebar__cocial-link" href="#">
+                <svg class="sidebar__cocial-svg">
+                  <use xlink:href="img/sidebar/web.svg#web"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="sidebar__cocial-item">
+              <a class="sidebar__cocial-link" href="#">
+                <svg class="sidebar__cocial-svg">
+                  <use xlink:href="img/sidebar/tell.svg#tell"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="sidebar__inner">
+          <a class="sidebar__link" href="tel:+375291136969"
+            >+375 (29) 113-69-69</a
+          >
+          <div class="sidebar__inner-box">
+            <svg class="tell">
+              <use xlink:href="img/sidebar/phone.svg#phone"></use>
+            </svg>
+            <a class="sidebar__link" href="#"> заказать звонок </a>
+          </div>
+          <div class="sidebar__cart-box">
+            <svg class="cart__svg">
+              <use xlink:href="img/sidebar/cart.svg#cart"></use>
+            </svg>
+            <div class="sidebar__cart-sum">0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+          <section class="categories">
+  <div class="container">
+    <div class="categories__box">
+      <!--  selector -->
+      <div class="selector">
+        <div class="selector__box">
+          <div class="selector__inner">
+            <select id="card-selector" class="selector__wrapper">
+              <option value="card1">За популярністю</option>
+              <option value="card2">новинки</option>
+              <option value="card3">Вид дешевих до дорогих</option>
+              <option value="card3">Вид дорогих до дешевих</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <!--   selector -->
+    </div>
+    <div class="categories__wrapper">
+      <div class="filter">
+        <div class="filter__wrapper">
+          <div class="filter__item filter-categories">
+            <h3 class="filter__title">ПО СВІТЛУ</h3>
+            <form class="filter-color__form" action="#">
+              <label class="filter-color__label">
+                <div class="filter-color__box">
+                  <input class="filter-color__input" type="checkbox" />
+                  <span
+                    class="filter-color__checbox filter-color__checbox--blue"
+                  ></span>
+                </div>
+                <span class="filter-color__text">НІЖНІ</span>
+              </label>
+              <label class="filter-color__label">
+                <div class="filter-color__box">
+                  <input class="filter-color__input" type="checkbox" />
+                  <span
+                    class="filter-color__checbox filter-color__checbox--blue"
+                  ></span>
+                </div>
+                <span class="filter-color__text">ЯСКРАВІ</span>
+              </label>
+            </form>
+          </div>
+
+          <div class="filter__item filter-price">
+            <h3 class="filter__title">ЦіНА</h3>
+            <form class="fitler-price__form" action="#">
+              <div class="wrapper">
+                <fieldset class="filter-price">
+                  <div class="price-field">
+                    <div class="slider-track"></div>
+                    <input
+                      type="range"
+                      min="100"
+                      max="500"
+                      value="100"
+                      id="lower"
+                    />
+                    <input
+                      type="range"
+                      min="100"
+                      max="500"
+                      value="500"
+                      id="upper"
+                    />
+                  </div>
+                </fieldset>
+              </div>
+              <div class="price__box">
+                ЦіНА :
+                <div class="price__wrapper">
+                  <span class="price">0</span>
+                  <span class="price__currency">Грн</span>
+                </div>
+                <div class="price__wrapper">
+                  <span class="price__max">0</span>
+                  <span class="price__currency">Грн</span>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="filter__item filter-color">
+            <h3 class="filter__title">По КОЛЬОРУ</h3>
+            <form class="filter-color__form" action="#">
+              <label class="filter-color__label">
+                <div class="filter-color__box">
+                  <input class="filter-color__input" type="checkbox" />
+                  <span
+                    class="filter-color__checbox filter-color__checbox--blue"
+                  ></span>
+                </div>
+                <span class="filter-color__text">БІЛИЙ</span>
+              </label>
+              <label class="filter-color__label">
+                <div class="filter-color__box">
+                  <input class="filter-color__input" type="checkbox" />
+                  <span
+                    class="filter-color__checbox filter-color__checbox--blue"
+                  ></span>
+                </div>
+                <span class="filter-color__text">ЧЕРВОНИЙ</span>
+              </label>
+              <label class="filter-color__label">
+                <div class="filter-color__box">
+                  <input class="filter-color__input" type="checkbox" />
+                  <span
+                    class="filter-color__checbox filter-color__checbox--blue"
+                  ></span>
+                </div>
+                <span class="filter-color__text">ЧЬОРНИЙ</span>
+            </form>
+          </div>
+
+          <div class="filter__item filter-flower">
+            <h3 class="filter__title">ЗА КВІТКОЮ</h3>
+            <form class="filter-color__form" action="#">
+              <label class="filter-color__label">
+                <div class="filter-color__box">
+                  <input class="filter-color__input" type="checkbox" />
+                  <span
+                    class="filter-color__checbox filter-color__checbox--blue"
+                  ></span>
+                </div>
+                <span class="filter-color__text">РОЗА</span>
+              </label>
+              <label class="filter-color__label">
+                <div class="filter-color__box">
+                  <input class="filter-color__input" type="checkbox" />
+                  <span
+                    class="filter-color__checbox filter-color__checbox--blue"
+                  ></span>
+                </div>
+                <span class="filter-color__text">ПІОНИ</span>
+              </label>
+            </form>
+          </div>
+        </div>
+      </div>
+      <ul class="categories__items">
+        <li class="categories__item">
+          <img src="img/categories/1.jpj" alt="" />
+          <span class="categories__name">лучший день</span>
+          <span class="categories__prac">177.22$</span>
+          <a class="categories__link" href="#">купить</a>
+        </li>
+        <li class="categories__item">
+          <img src="img/categories/2.jpj" alt="" />
+          <span class="categories__name">лучший день</span>
+          <span class="categories__prac">177.22$</span>
+          <a class="categories__link" href="#">купить</a>
+        </li>
+        <li class="categories__item">
+          <img src="img/categories/3.jpj" alt="" />
+          <span class="categories__name">лучший день</span>
+          <span class="categories__prac">177.22$</span>
+          <a class="categories__link" href="#">купить</a>
+        </li>
+        <li class="categories__item">
+          <img src="img/categories/4.jpj" alt="" />
+          <span class="categories__name">лучший день</span>
+          <span class="categories__prac">177.22$</span>
+          <a class="categories__link" href="#">купить</a>
+        </li>
+        <li class="categories__item">
+          <img src="img/categories/5.jpj" alt="" />
+          <span class="categories__name">лучший день</span>
+          <span class="categories__prac">177.22$</span>
+          <a class="categories__link" href="#">купить</a>
+        </li>
+        <li class="categories__item">
+          <img src="img/categories/6.jpj" alt="" />
+          <span class="categories__name">лучший день</span>
+          <span class="categories__prac">177.22$</span>
+          <a class="categories__link" href="#">купить</a>
+        </li>
+        <li class="categories__item">
+          <img src="img/categories/7.jpj" alt="" />
+          <span class="categories__name">лучший день</span>
+          <span class="categories__prac">177.22$</span>
+          <a class="categories__link" href="#">купить</a>
+        </li>
+        <li class="categories__item">
+          <img src="img/categories/8.jpj" alt="" />
+          <span class="categories__name">лучший день</span>
+          <span class="categories__prac">177.22$</span>
+          <a class="categories__link" href="#">купить</a>
+        </li>
+        <li class="categories__item">
+          <img src="img/categories/9.jpj" alt="" />
+          <span class="categories__name">лучший день</span>
+          <span class="categories__prac">177.22$</span>
+          <a class="categories__link" href="#">купить</a>
+        </li>
+        <li class="categories__item">
+          <img src="img/categories/10.jpj" alt="" />
+          <span class="categories__name">лучший день</span>
+          <span class="categories__prac">177.22$</span>
+          <a class="categories__link" href="#">купить</a>
+        </li>
+        <li class="categories__item">
+          <img src="img/categories/11.jpj" alt="" />
+          <span class="categories__name">лучший день</span>
+          <span class="categories__prac">177.22$</span>
+          <a class="categories__link" href="#">купить</a>
+        </li>
+        <li class="categories__item">
+          <img src="img/categories/12.jpj" alt="" />
+          <span class="categories__name">лучший день</span>
+          <span class="categories__prac">177.22$</span>
+          <a class="categories__link" href="#">купить</a>
+        </li>
+      </ul>
+    </div>
+    <div class="categories__inner">
+      <ul class="pagination">
+        <li class="pagination__item">
+          <a class="pagination__link" href="#">
+            <svg
+              class="pagination__icon"
+              viewBox="0 0 29 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M8.91674 15.6759C8.49831 16.1021 7.8132 16.1088 7.38651 15.6908L0.32445 8.77187C0.116927 8.56856 6.73996e-07 8.29038 6.99382e-07 8C7.24768e-07 7.70962 0.116927 7.43144 0.32445 7.22813L7.38651 0.309207C7.8132 -0.108835 8.49831 -0.102146 8.91674 0.324147C9.33518 0.750441 9.32848 1.43491 8.90179 1.85295L3.73102 6.91892L27.9179 6.91892C28.5155 6.91892 29 7.40294 29 8C29 8.59707 28.5155 9.08108 27.9179 9.08108L3.73102 9.08108L8.90179 14.147C9.32848 14.5651 9.33517 15.2496 8.91674 15.6759Z"
+              />
+            </svg>
+          </a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link current" href="#">1</a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#">2</a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#">3</a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#">4</a>
+        </li>
+        <li class="pagination__item">
+          <span class="pagination__dots">...</span>
+        </li>
+        <li class="pagination__item">
+          <a href="" class="pagination__link">85</a>
+        </li>
+        <li class="pagination__item">
+          <a class="pagination__link" href="#">
+            <svg
+              class="pagination__icon"
+              viewBox="0 0 29 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M20.0833 0.324148C20.5017 -0.102146 21.1868 -0.108834 21.6135 0.309208L28.6756 7.22813C28.8831 7.43144 29 7.70962 29 8C29 8.29038 28.8831 8.56856 28.6756 8.77187L21.6135 15.6908C21.1868 16.1088 20.5017 16.1021 20.0833 15.6759C19.6648 15.2496 19.6715 14.5651 20.0982 14.147L25.269 9.08108L1.08209 9.08108C0.484468 9.08108 0 8.59706 0 8C0 7.40293 0.484468 6.91892 1.08209 6.91892L25.269 6.91892L20.0982 1.85295C19.6715 1.43491 19.6648 0.750441 20.0833 0.324148Z"
+              />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
     </main>
 
     <!-- Footer -->

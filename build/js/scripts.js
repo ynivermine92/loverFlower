@@ -303,7 +303,7 @@ window.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('load', initSwiper);
     window.addEventListener('resize', initSwiper);
 
-
+    /* header position */
     const headerLocalHome = () => {
         const isHome = location.pathname === '/' || location.pathname.endsWith('index.html');
         const header = document.querySelector('header');
@@ -315,6 +315,65 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
     headerLocalHome()
+
+    /* select popular */
+    const selectPopular = () => {
+
+        const select = document.querySelector('.selector__inner');
+        select.addEventListener('click', () => {
+            select.classList.toggle('active');
+        })
+    }
+    selectPopular()
+
+    /* filterPrace */
+    const filterPrace = () => {
+        const lower = document.getElementById("lower");
+        const upper = document.getElementById("upper");
+        const track = document.querySelector(".slider-track");
+
+        const min = parseInt(lower.min);
+        const max = parseInt(upper.max);
+
+        const minGap = 10;
+
+
+        const priceMin = document.querySelector(".price");
+        const priceMax = document.querySelector(".price__max");
+
+        function updateTrack(e) {
+            let lowerVal = parseInt(lower.value);
+            let upperVal = parseInt(upper.value);
+
+            if (upperVal - lowerVal <= minGap) {
+                if (e.target === lower) {
+                    lower.value = upperVal - minGap;
+                } else {
+                    upper.value = lowerVal + minGap;
+                }
+                lowerVal = parseInt(lower.value);
+                upperVal = parseInt(upper.value);
+            }
+
+            const percent1 = ((lowerVal - min) / (max - min)) * 100;
+            const percent2 = ((upperVal - min) / (max - min)) * 100;
+
+            track.style.left = percent1 + "%";
+            track.style.width = (percent2 - percent1) + "%";
+
+
+            priceMin.textContent = lowerVal;
+            priceMax.textContent = upperVal;
+        }
+
+        lower.addEventListener("input", updateTrack);
+        upper.addEventListener("input", updateTrack);
+
+        updateTrack();
+    }
+    filterPrace();
+
+
 })
 
 
