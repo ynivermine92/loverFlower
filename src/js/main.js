@@ -139,4 +139,20 @@ window.addEventListener('DOMContentLoaded', () => {
     filterPrace();
 
 
+    /* categoriesCart */
+    const categoriesCart = () => {
+        const track = document.querySelector(".categories__link");
+
+    }
+    categoriesCart()
+
+    const TopHeadebasket = () => {
+        const bredcrubs = document.querySelector('.top');
+        const basket = document.querySelector('.header__user-items');
+        if (bredcrubs) {
+            basket.classList.add('active');
+        }
+
+    }
+    TopHeadebasket()
 })

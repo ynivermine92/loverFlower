@@ -2,7 +2,73 @@
     &__wrapper {
         margin-top: 20px;
         display: flex;
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-left: 30px;
+        gap: 60px 30px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        max-width: 255px;
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__cart {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+        border-radius: 16px;
+        text-decoration: none;
+
+        img {
+            transition: all 0.6s;
+            transform: scale(1);
+        }
+
+        &:hover img {
+            transition: all 0.6s;
+            transform: scale(1.06);
+        }
+
 
     }
 
+    &__name {
+        padding: 10px 0;
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        line-height: 1.5em;
+        letter-spacing: 4%;
+        text-transform: uppercase;
+        @extend %os-400;
+        display: block;
+    }
+
+    &__link {
+        color: rgb(255, 255, 255);
+        font-size: 12px;
+        @extend %os-700;
+        padding: 16px;
+        text-align: center;
+        box-sizing: border-box;
+        background: transparent;
+        border: 0.5px solid rgb(255, 255, 255);
+        @extend %btnSlider;
+        max-width: 100%;
+    }
+
+    &__price {
+        color: rgb(255, 255, 255);
+        padding-bottom: 20px;
+    }
 }
