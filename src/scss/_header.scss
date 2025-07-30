@@ -1,14 +1,14 @@
 // ========================= [ Header styles ] =========================
 
-.home-header{
+.home-header {
     position: fixed;
 }
+
 header {
     left: 0;
     top: 0;
     width: 100%;
     z-index: 2;
-
 }
 
 .header {
@@ -52,7 +52,7 @@ header {
         /* немного сдвинут вверх */
         visibility: hidden;
         align-items: center;
-        gap: 37px;
+        gap: 20px;
         transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
 
         &.active {
@@ -62,6 +62,14 @@ header {
         }
     }
 
+    .sidebar__link {
+        font-size: 14px;
+    }
+
+    &__user-items .sidebar__cart-sum {
+        top: -4px;
+        right: -7px;
+    }
 
 }
 
@@ -90,9 +98,9 @@ header {
 // ========================== [ Menu styles ] ==========================
 .menu {
     display: flex;
-    gap: 40px;
-    margin-right: 70px;
-
+    gap: 34px;
+    margin-right: 56px;
+    align-items: center;
     .menu__search-mob {
         display: none;
     }
@@ -109,6 +117,7 @@ header {
         position: relative;
         transition: 0.5s color;
         text-transform: uppercase;
+        font-size: 14px;
 
         &:after {
             position: absolute;
@@ -310,6 +319,8 @@ header {
 
 }
 
+
+
 @media (max-width: 990px) {
     .header {
         .sidebar__link {
@@ -406,10 +417,4 @@ header {
             font-size: 13px;
         }
     }
-}
-
-
-.header__user-items .sidebar__cart-sum {
-    top: -4px;
-    right: -7px;
 }

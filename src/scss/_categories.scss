@@ -71,4 +71,34 @@
         color: rgb(255, 255, 255);
         padding-bottom: 20px;
     }
+
+    @media (max-width:900px) {
+        & {
+            &__items {
+                margin-left: 0;
+            }
+        }
+
+        .selector__inner {
+            width: 190px;
+        }
+    }
+
+    @media (max-width:668px) {
+        & {
+            &__items {
+                gap: 30px 20px;
+            }
+        }
+    }
+
+    @media (max-width:500px) {
+        & {
+            &__items {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+
+
 }

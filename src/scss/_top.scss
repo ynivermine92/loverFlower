@@ -92,14 +92,30 @@
 
 @media (max-width:660px) {
     .top {
-        &__title {
+        .title {
             font-size: 39px;
 
             span+span {
-                padding-left: 50px;
+                padding-left: 20px;
             }
         }
+
     }
+}
 
 
+@media (max-width:450px) {
+    .top {
+        .title {
+            span:first-child {
+                padding-left: 10px;
+
+            }
+
+            span+span {
+                padding-left: 20px;
+            }
+        }
+
+    }
 }
