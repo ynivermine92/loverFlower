@@ -156,11 +156,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     const filterToggle = (e) => {
+        const cartItms = document.querySelector('.categories__content');
         const filterBtn = document.querySelector('.categories__filter-box');
         const burger = document.querySelector('.burger');
         const filter = document.querySelector('.filter');
         const body = document.querySelector('body');
-        const cartItms = document.querySelector('.categories__content');
 
         filterBtn.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -181,23 +181,21 @@ window.addEventListener('DOMContentLoaded', () => {
             filterBtn.classList.remove('active');
         });
 
+
+
+        document.addEventListener('click', function (event) {
+            const filter = document.querySelector('.filter.active');
+            const filterBtn = document.querySelector('.categories__filter-box');
+
+            if (filter && !filter.contains(event.target) && !filterBtn.contains(event.target)) {
+                filter.classList.remove('active');
+                document.body.classList.remove('locked');
+                filterBtn.classList.remove('active');
+                cartItms.classList.remove('blocked');
+            }
+
+        });
     };
-
-    document.addEventListener('click', function (event) {
-        const filter = document.querySelector('.filter.active');
-        const filterBtn = document.querySelector('.categories__filter-box');
-
-        if (
-            filter &&
-            !filter.contains(event.target) &&
-            !filterBtn.contains(event.target)
-        ) {
-            filter.classList.remove('active');
-            document.body.classList.remove('locked');
-            filterBtn.classList.remove('active');
-        }
-
-    });
     filterToggle();
 
 
