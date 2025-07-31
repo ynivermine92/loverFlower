@@ -1886,14 +1886,6 @@ header {
   width: 100%;
 }
 
-.categories__filter-box:hover {
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  border: 1px solid none;
-  background: #7d2253;
-  border-radius: 50%;
-}
-
 .categories__filter-box.active {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -3756,6 +3748,10 @@ main::before {
 
   .categories .selector__inner {
     width: 230px;
+  }
+
+  .categories .blocked {
+    pointer-events: none;
   }
 
   .filter {

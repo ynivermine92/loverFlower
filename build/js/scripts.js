@@ -259,8 +259,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     AOS.init({
-        offset: 0,
-        once: true
+        duration: 3000,
+        once: false
     });
 
 
@@ -387,34 +387,54 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
-    const filterToggle = () => {
+    const filterToggle = (e) => {
         const filterBtn = document.querySelector('.categories__filter-box');
         const burger = document.querySelector('.burger');
-
         const filter = document.querySelector('.filter');
         const body = document.querySelector('body');
-        filterBtn.addEventListener('click', () => {
-            filter.classList.toggle('active')
+        const cartItms = document.querySelector('.categories__content');
+
+        filterBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            filter.classList.toggle('active');
+            filterBtn.classList.toggle('active');
+            body.classList.toggle('locked', filter.classList.contains('active'));
             if (filter.classList.contains('active')) {
-                body.classList.add('locked');
+                cartItms.classList.add('blocked');
             } else {
-                body.classList.remove('locked');
+                cartItms.classList.remove('blocked');
             }
+        });
 
 
-        })
 
         burger.addEventListener('click', () => {
-            if (burger.classList.contains('active')) {
-                filterBtn.style.opacity = '0';
-            } else {
-                filterBtn.style.opacity = '1';
-            }
-        })
+            filterBtn.style.opacity = burger.classList.contains('active') ? '0' : '1';
+            filterBtn.classList.remove('active');
+        });
 
-        
-    }
+    };
+
+    document.addEventListener('click', function (event) {
+        const filter = document.querySelector('.filter.active');
+        const filterBtn = document.querySelector('.categories__filter-box');
+
+        if (
+            filter &&
+            !filter.contains(event.target) &&
+            !filterBtn.contains(event.target)
+        ) {
+            filter.classList.remove('active');
+            document.body.classList.remove('locked');
+            filterBtn.classList.remove('active');
+        }
+
+    });
     filterToggle();
+
+
+
+
 
 })
 

@@ -92,13 +92,6 @@
             width: 100%;
         }
 
-        &:hover {
-            transition: all 0.5s;
-            border: 1px solid none;
-            background: #7d2253;
-            border-radius: 50%;
-        }
-
         &.active {
             transition: all 0.5s;
             border: 1px solid none;
@@ -123,6 +116,10 @@
 
         .selector__inner {
             width: 230px;
+        }
+
+        .blocked {
+            pointer-events: none;
         }
     }
 
