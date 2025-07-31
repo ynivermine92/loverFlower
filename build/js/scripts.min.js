@@ -2,13 +2,12 @@
 
 
 const userBlock = document.querySelector('.header__user-items');
+const mainHome = document.querySelector('.main-home');
 
 function burgerMenu() {
     const burger = document.querySelector('.burger')
     const menu = document.querySelector('.menu')
     const body = document.querySelector('body')
-    const homeTitle = document.querySelector('.home__wrapper')
-    const cart = document.querySelector('.sidebar__cart-box')
     const navbar = document.querySelector('.navbar')
 
 
@@ -17,8 +16,6 @@ function burgerMenu() {
             menu.classList.add('active')
             burger.classList.add('active')
             body.classList.add('locked')
-            homeTitle.style.display = 'none';
-            cart.style.display = 'none'
             navbar.classList.add('active')
             userBlock.style.display = 'none'
         } else {
@@ -26,15 +23,13 @@ function burgerMenu() {
             burger.classList.remove('active')
             body.classList.remove('locked')
             navbar.classList.remove('active')
-            homeTitle.style.display = 'block';
-            cart.style.display = 'block'
             userBlock.style.display = 'flex'
         }
     })
 
 
     window.addEventListener('resize', () => {
-        if (window.innerWidth > 991.98) {
+        if (window.innerWidth > 991.98 && mainHome) {
             menu.classList.remove('active')
             burger.classList.remove('active')
             body.classList.remove('locked')
@@ -62,7 +57,6 @@ function fixedHeader() {
     const sidebar = document.querySelector('.sidebar')
     const nav = document.querySelector('.header')
 
-
     const breakpoint = 1
     if (window.scrollY >= breakpoint) {
         nav.classList.add('fixed')
@@ -83,7 +77,10 @@ function fixedHeader() {
 
     }
 }
-window.addEventListener('scroll', fixedHeader)
+if (mainHome) {
+    window.addEventListener('scroll', fixedHeader)
+
+}
 
 /**
  * Swiper 7.3.1
@@ -267,10 +264,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
 
-
-
-
-
     let swiper;
 
     function initSwiper() {
@@ -390,6 +383,39 @@ window.addEventListener('DOMContentLoaded', () => {
 
     }
     TopHeadebasket()
+
+
+
+
+    const filterToggle = () => {
+        const filterBtn = document.querySelector('.categories__filter-box');
+        const burger = document.querySelector('.burger');
+
+        const filter = document.querySelector('.filter');
+        const body = document.querySelector('body');
+        filterBtn.addEventListener('click', () => {
+            filter.classList.toggle('active')
+            if (filter.classList.contains('active')) {
+                body.classList.add('locked');
+            } else {
+                body.classList.remove('locked');
+            }
+
+
+        })
+
+        burger.addEventListener('click', () => {
+            if (burger.classList.contains('active')) {
+                filterBtn.style.opacity = '0';
+            } else {
+                filterBtn.style.opacity = '1';
+            }
+        })
+
+        
+    }
+    filterToggle();
+
 })
 
 

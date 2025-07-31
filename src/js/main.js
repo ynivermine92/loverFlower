@@ -32,10 +32,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
 
-
-
-
-
     let swiper;
 
     function initSwiper() {
@@ -155,4 +151,37 @@ window.addEventListener('DOMContentLoaded', () => {
 
     }
     TopHeadebasket()
+
+
+
+
+    const filterToggle = () => {
+        const filterBtn = document.querySelector('.categories__filter-box');
+        const burger = document.querySelector('.burger');
+
+        const filter = document.querySelector('.filter');
+        const body = document.querySelector('body');
+        filterBtn.addEventListener('click', () => {
+            filter.classList.toggle('active')
+            if (filter.classList.contains('active')) {
+                body.classList.add('locked');
+            } else {
+                body.classList.remove('locked');
+            }
+
+
+        })
+
+        burger.addEventListener('click', () => {
+            if (burger.classList.contains('active')) {
+                filterBtn.style.opacity = '0';
+            } else {
+                filterBtn.style.opacity = '1';
+            }
+        })
+
+        
+    }
+    filterToggle();
+
 })

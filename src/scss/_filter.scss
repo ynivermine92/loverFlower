@@ -1,13 +1,17 @@
 .filter {
+    backdrop-filter: blur(20px);
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px 16px 30px 16px;
+    color: rgb(255, 255, 255);
+
     &__wrapper {
         width: 256px;
         border-radius: 20px;
-        backdrop-filter: blur(20px);
-        background: rgba(0, 0, 0, 0.3);
-        padding: 20px 16px 30px 16px;
-        color: rgb(255, 255, 255);
         font-size: 12px;
         @extend %os-300;
+
+
+
     }
 
     &__item+&__item {
@@ -40,17 +44,25 @@
         gap: 10px;
     }
 
+    input,
+    span {
+        cursor: pointer;
+    }
+
     @media (max-width:900px) {
         position: fixed;
         left: -100%; // скрыт за экраном
         height: 100%;
         overflow-y: auto;
-        z-index: 1000;
+        z-index: 2;
         transition: left 0.3s ease;
     }
 
     &.active {
         left: 0;
+        top: 0%;
+        overflow-y: auto;
+        height: 100vh;
     }
 }
 
@@ -207,6 +219,10 @@ input[type="range"] {
     &__box {
         display: flex;
         padding-top: 10px;
+
+        span {
+            cursor: unset;
+        }
 
     }
 

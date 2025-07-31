@@ -5,6 +5,8 @@
 }
 
 header {
+    z-index: 100;
+    position: relative;
     left: 0;
     top: 0;
     width: 100%;
@@ -77,16 +79,15 @@ header {
     display: flex;
     align-items: center;
     padding: 20px 0;
-
+    justify-content: space-between;
 
     &.active {
-        display: flex;
-        justify-content: end;
+        position: absolute;
+        right: 5%;
     }
 }
 
 .logo {
-    margin-right: 70px;
     display: flex;
     align-items: center;
 
@@ -98,9 +99,9 @@ header {
 // ========================== [ Menu styles ] ==========================
 .menu {
     display: flex;
-    gap: 34px;
-    margin-right: 56px;
+    gap: 40px;
     align-items: center;
+
     .menu__search-mob {
         display: none;
     }
@@ -198,6 +199,13 @@ header {
             align-items: center;
             z-index: 2;
             animation: fade 0.1s linear;
+            gap: 20px;
+            .sidebar__link{
+                margin-bottom: 10px;
+            }
+            .menu__iten-wrapper{
+                line-height: 1.5em;
+            }
         }
     }
 
@@ -205,17 +213,6 @@ header {
         display: none;
     }
 
-    @media (max-width: 1200px) {
-        & {
-            gap: 25px;
-        }
-    }
-
-    @media (max-width: 1050px) {
-        & {
-            gap: 18px;
-        }
-    }
 
 }
 
