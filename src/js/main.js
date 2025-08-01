@@ -79,11 +79,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
     /* select popular */
     const selectPopular = () => {
-
         const select = document.querySelector('.selector__inner');
-        select.addEventListener('click', () => {
-            select.classList.toggle('active');
-        })
+        if (select) {
+            select.addEventListener('click', () => {
+                select.classList.toggle('active');
+            })
+
+        }
     }
     selectPopular()
 
@@ -93,44 +95,45 @@ window.addEventListener('DOMContentLoaded', () => {
         const upper = document.getElementById("upper");
         const track = document.querySelector(".slider-track");
 
-        const min = parseInt(lower.min);
-        const max = parseInt(upper.max);
+        if (lower && upper && track) {
+            const min = parseInt(lower.min);
+            const max = parseInt(upper.max);
+            const minGap = 10;
 
-        const minGap = 10;
 
+            const priceMin = document.querySelector(".price");
+            const priceMax = document.querySelector(".price__max");
 
-        const priceMin = document.querySelector(".price");
-        const priceMax = document.querySelector(".price__max");
+            function updateTrack(e) {
+                let lowerVal = parseInt(lower.value);
+                let upperVal = parseInt(upper.value);
 
-        function updateTrack(e) {
-            let lowerVal = parseInt(lower.value);
-            let upperVal = parseInt(upper.value);
-
-            if (upperVal - lowerVal <= minGap) {
-                if (e.target === lower) {
-                    lower.value = upperVal - minGap;
-                } else {
-                    upper.value = lowerVal + minGap;
+                if (upperVal - lowerVal <= minGap) {
+                    if (e.target === lower) {
+                        lower.value = upperVal - minGap;
+                    } else {
+                        upper.value = lowerVal + minGap;
+                    }
+                    lowerVal = parseInt(lower.value);
+                    upperVal = parseInt(upper.value);
                 }
-                lowerVal = parseInt(lower.value);
-                upperVal = parseInt(upper.value);
+
+                const percent1 = ((lowerVal - min) / (max - min)) * 100;
+                const percent2 = ((upperVal - min) / (max - min)) * 100;
+
+                track.style.left = percent1 + "%";
+                track.style.width = (percent2 - percent1) + "%";
+
+
+                priceMin.textContent = lowerVal;
+                priceMax.textContent = upperVal;
             }
 
-            const percent1 = ((lowerVal - min) / (max - min)) * 100;
-            const percent2 = ((upperVal - min) / (max - min)) * 100;
+            lower.addEventListener("input", updateTrack);
+            upper.addEventListener("input", updateTrack);
 
-            track.style.left = percent1 + "%";
-            track.style.width = (percent2 - percent1) + "%";
-
-
-            priceMin.textContent = lowerVal;
-            priceMax.textContent = upperVal;
+            updateTrack();
         }
-
-        lower.addEventListener("input", updateTrack);
-        upper.addEventListener("input", updateTrack);
-
-        updateTrack();
     }
     filterPrace();
 
@@ -161,18 +164,19 @@ window.addEventListener('DOMContentLoaded', () => {
         const burger = document.querySelector('.burger');
         const filter = document.querySelector('.filter');
         const body = document.querySelector('body');
-
-        filterBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            filter.classList.toggle('active');
-            filterBtn.classList.toggle('active');
-            body.classList.toggle('locked', filter.classList.contains('active'));
-            if (filter.classList.contains('active')) {
-                cartItms.classList.add('blocked');
-            } else {
-                cartItms.classList.remove('blocked');
-            }
-        });
+        if (filterBtn) {
+            filterBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                filter.classList.toggle('active');
+                filterBtn.classList.toggle('active');
+                body.classList.toggle('locked', filter.classList.contains('active'));
+                if (filter.classList.contains('active')) {
+                    cartItms.classList.add('blocked');
+                } else {
+                    cartItms.classList.remove('blocked');
+                }
+            });
+        }
 
 
 
@@ -200,6 +204,135 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
+    /*   slider product */
+    const sliderThumbs = new Swiper('.thumbs-container', {
+        direction: 'vertical',
+        slidesPerView: 2,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.slider__next',
+            prevEl: '.slider__prev'
+        },
+        freeMode: true,
+        breakpoints: {
+            0: { direction: 'horizontal', slidesPerView: 1.5 },
+            360: { direction: 'horizontal', slidesPerView: 2 },
+            500: { direction: 'horizontal', slidesPerView: 3 },
+            768: { direction: 'vertical' }
+        }
+    });
+
+    const sliderImages = new Swiper('.images-container', {
+        direction: 'vertical',
+        slidesPerView: 1,
+        spaceBetween: 32,
+        mousewheel: false,
+        navigation: {
+            nextEl: '.slider__next',
+            prevEl: '.slider__prev'
+        },
+        grabCursor: false,
+        simulateTouch: false,
+        allowTouchMove: false,
+        thumbs: {
+            swiper: sliderThumbs
+        },
+        breakpoints: {
+            0: { direction: 'vertical' },
+            768: { direction: 'vertical' }
+        }
+    });
+
+
+
+    
+    /* select counter */
+    document.querySelectorAll(".counter").forEach((counter) => {
+        const counterInput = counter.querySelector(".counter__input");
+        const btnMinus = counter.querySelector(".minus");
+        const btnPlus = counter.querySelector(".plus");
+        let count = counterInput.value;
+
+        counterInput.addEventListener("keyup", (e) => {
+            let self = e.currentTarget;
+
+            if (self.value == "0") self.value = 1;
+
+            count = counterInput.value;
+
+            disabledBtnMinus();
+            disabledBtnPlus();
+        });
+
+        counterInput.addEventListener("keypress", (e) => {
+            let code = e.which ? e.which : e.keyCode;
+            if (code > 31 && (code < 48 || code > 57)) {
+                e.preventDefault();
+            }
+        });
+
+        counterInput.addEventListener("change", (e) => {
+            let self = e.currentTarget;
+
+            if (!self.value) self.value = 1;
+
+            count = counterInput.value;
+
+            disabledBtnMinus();
+            disabledBtnPlus();
+        });
+
+        counterInput.addEventListener("focus", (e) => {
+            counterInput.value = "";
+        });
+
+        counterInput.addEventListener("blur", (e) => {
+            let self = e.currentTarget;
+
+            if (!self.value) self.value = 1;
+
+            count = counterInput.value;
+
+            disabledBtnMinus();
+        });
+
+        btnPlus.addEventListener("click", (e) => {
+            e.preventDefault();
+
+            count++;
+
+            disabledBtnMinus();
+            disabledBtnPlus();
+
+            counterInput.value = count;
+        });
+
+        btnMinus.addEventListener("click", (e) => {
+            e.preventDefault();
+
+            count--;
+
+            disabledBtnMinus();
+
+            count <= 999
+                ? btnPlus.classList.remove("disabled")
+                : btnPlus.classList.add("disabled");
+
+            counterInput.value = count;
+        });
+
+        function disabledBtnMinus() {
+            count == 1
+                ? btnMinus.classList.add("disabled")
+                : btnMinus.classList.remove("disabled");
+        }
+
+        function disabledBtnPlus() {
+            count >= 999
+                ? btnPlus.classList.add("disabled")
+                : btnPlus.classList.remove("disabled");
+        }
+    });
 
 
 })

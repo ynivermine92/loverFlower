@@ -12,25 +12,28 @@
 /* general */
 
 
-/* section home */
+/* page home */
 @import './home';
 @import './sidebar';
 @import './catalog';
 @import './popular';
+@import './slider-popular';
 @import './order';
 @import './special';
 @import './questions';
 @import './social';
 /* section home */
 
-/* section shop */
+/* page shop */
 @import './categories';
 @import './select-tab';
 @import './filter';
-/* section shop */
+/* page shop */
 
+/* page product */
+@import './slider-product';
+/* page product */
 @import './footer';
-
 // Libs
 @import './libs/swiper';
 /* @import './libs/fancybox'; */
@@ -39,7 +42,7 @@
 
 
 /* body */
-.shop {
+body {
     background-size: 100%;
     background-repeat: no-repeat;
 }

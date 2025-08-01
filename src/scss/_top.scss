@@ -12,25 +12,21 @@
     .bredcrumbs {
         ul {
             display: flex;
-            gap: 20px;
             padding-bottom: 38px;
         }
 
-        li {
-            position: relative;
-
-            &::before {
-                content: '/';
-                position: absolute;
-                color: #ffff;
-                right: -30%;
-            }
-        }
+        li {}
 
         li:last-child {
             &::before {
                 display: none;
             }
+        }
+
+        &__separator {
+            font-size: 13px;
+            color: #fff;
+            margin: 5px;
         }
 
         a {
@@ -118,4 +114,15 @@
         }
 
     }
+}
+
+@media (max-width:330px) {
+    .bredcrumbs__separator {
+        margin: 3px !important;
+    }
+
+    .bredcrumbs a {
+        font-size: 10px !important;
+    }
+
 }
