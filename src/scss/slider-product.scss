@@ -1,8 +1,13 @@
 .slider-product {
+  &__wrapper {
+    .slider-product__back {
+      display: none;
+    }
+  }
 
   .slider {
-    padding: 32px;
     color: #fff;
+    display: flex;
   }
 
   .slider .swiper-container {
@@ -40,9 +45,11 @@
     user-select: none;
     margin: 0 auto;
   }
-  .slider__prev{
+
+  .slider__prev {
     transform: rotate(180deg);
   }
+
   .slider__prev:focus,
   .slider__next:focus {
     outline: none;
@@ -57,6 +64,7 @@
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     opacity: 0.5;
+    cursor: pointer;
   }
 
   .slider__thumbs .slider__image:hover {
@@ -99,7 +107,7 @@
 
   .slider__thumbs {
     overflow: hidden;
-    height: 380px;
+    height: 390px;
   }
 
 
@@ -112,39 +120,39 @@
 
   .counter {
     width: 100%;
-    max-width: 130px;
-    height: 40px;
+    max-width: 160px;
+    height: 55px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-radius: 10px;
     overflow: hidden;
-    margin: 20px;
+    border: 0.5px solid rgb(255, 255, 255);
 
     &__input {
       width: 50px;
       height: 100%;
-      border-top: 1px solid #d4d4d4;
-      border-bottom: 1px solid #d4d4d4;
+      color: #fff;
       font-family: "Roboto", Arial, sans-serif;
       font-weight: 700;
       font-size: 18px;
       text-align: center;
       outline: none;
       padding: 0 5px;
+      background: transparent;
     }
 
     &__btn {
       width: 40px;
       height: 100%;
-      background: #2f80ed;
+      background: transparent;
       border: none;
       outline: none;
       cursor: pointer;
       transition: background 0.3s;
 
       &:hover {
-        background: #2669c3;
+        background: #43ffd2;
       }
 
       &.minus {
@@ -165,19 +173,111 @@
     }
   }
 
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    max-width: 440px;
+    margin-left: 30px;
+  }
+
+  &__wrapper-back {
+    display: flex;
+    align-items: center;
+  }
+
+  &__back {
+    font-size: 10px;
+    color: #fff;
+    transition: all 0.5s;
+
+    &:hover {
+      color: #43ffd2;
+      transition: all 0.5s;
+    }
+
+    span {
+      font-size: 12px;
+      margin-right: 4px;
+    }
+  }
+
+  &__title {
+    font-size: 40px;
+    @extend %co-400;
+    line-height: 1.5em;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+  }
+
+  &__box {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__new-prace {
+    @extend %os-700;
+    color: rgb(67, 255, 210);
+    font-size: 30px;
+  }
+
+  &__prace {
+    @extend %os-300;
+    font-size: 30px;
+    text-decoration-line: line-through;
+
+  }
+
+  &__text {
+    font-size: 14px;
+    @extend %os-700;
+    margin-top: 20px;
+    line-height: 1.5em;
+  }
+
+  &__description-text {
+    @extend %os-300;
+    font-size: 12px;
+    margin-top: 20px;
+    line-height: 1.5em;
+    max-width: 400px;
+  }
+
+
+  &__select {
+    display: flex;
+    align-items: center;
+    gap: 29px;
+    margin-top: 80px;
+  }
+
+  &__btn {
+    @extend %btnSlider;
+    background: transparent;
+    padding: 18px 82px;
+    font-size: 12px;
+    @extend %os-700;
+  }
 
 
 
 
-
-
-  @media (max-width: 767.98px) {
+  @media (max-width: 1000px) {
     .slider {
-      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__wrapper {
+      .slider-product__back {
+        display: block;
+      }
     }
 
     .slider__flex {
       flex-direction: column-reverse;
+      padding: 50px 0;
+      align-items: center;
     }
 
     .swiper-container {
@@ -214,6 +314,69 @@
       width: 32px;
     }
 
+    &__inner {
+      margin-left: 0px;
+    }
 
+    .slider__prev {
+      transform: rotate(90deg);
+    }
+
+    .slider__next {
+      transform: rotate(268deg);
+    }
+
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+    }
+
+    .slider__image {
+      max-width: 300px;
+    }
+
+    .slider__thumbs {
+      max-width: 300px;
+    }
+
+    .slider__col {
+      max-width: 400px;
+    }
+
+    &__inner {
+      .slider-product__back {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 668px) {
+    .slider__flex {
+      flex-direction: column-reverse;
+      padding: 50px 0px;
+    }
+
+    .slider-product__select {
+      margin-top: 20px;
+    }
+
+    .slider-product__btn {
+      padding: 15px 60px;
+    }
+  }
+
+
+  @media (max-width: 450px) {
+    .slider-product__select {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .slider-product__btn,
+    .counter {
+      max-width: 100%;
+      width: 100%;
+    }
   }
 }

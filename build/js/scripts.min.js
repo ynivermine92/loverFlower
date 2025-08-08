@@ -450,7 +450,7 @@ window.addEventListener('DOMContentLoaded', () => {
             0: { direction: 'horizontal', slidesPerView: 1.5 },
             360: { direction: 'horizontal', slidesPerView: 2 },
             500: { direction: 'horizontal', slidesPerView: 3 },
-            768: { direction: 'vertical' }
+            1000: { direction: 'vertical' }
         }
     });
 
@@ -471,13 +471,13 @@ window.addEventListener('DOMContentLoaded', () => {
         },
         breakpoints: {
             0: { direction: 'vertical' },
-            768: { direction: 'vertical' }
+            1000: { direction: 'vertical' }
         }
     });
 
 
 
-    
+
     /* select counter */
     document.querySelectorAll(".counter").forEach((counter) => {
         const counterInput = counter.querySelector(".counter__input");
@@ -565,6 +565,63 @@ window.addEventListener('DOMContentLoaded', () => {
                 : btnPlus.classList.remove("disabled");
         }
     });
+
+
+    /* tabs */
+    function tabs(headerSelector, tabSelector, contentSelector, activeClass, display = 'flex') {
+        const header = document.querySelector(headerSelector),
+            tabs = document.querySelectorAll(tabSelector),
+            contents = document.querySelectorAll(contentSelector);
+
+        function hideTabContent() {
+            contents.forEach(item => {
+                item.style.display = 'none';
+            });
+            tabs.forEach(item => {
+                item.classList.remove(activeClass);
+            });
+        }
+
+        function showTabContent(i = 0) {
+            contents[i].style.display = display;
+            tabs[i].classList.add(activeClass);
+        }
+
+        hideTabContent();
+        showTabContent();
+
+        header.addEventListener('click', e => {
+            const target = e.target;
+            if (target.classList.contains(tabSelector.replace(/\./, '')) ||
+                target.parentNode.classList.contains(tabSelector.replace(/\./, ''))) {
+                tabs.forEach((item, i) => {
+                    if (target == item || target.parentNode == item) {
+                        hideTabContent();
+                        showTabContent(i);
+                    }
+                });
+            }
+        });
+    }
+
+    tabs('.tabs__header', '.tabs__header-item', '.tabs__content-item', 'active');
+
+
+
+
+  /*rating*/
+    const stars = document.querySelectorAll(".rating__star");
+    for (const star of stars) {
+        star.addEventListener("click", () => {
+            for (const star of stars) {
+                star.classList.remove("active");
+            }
+            star.classList.add("active");
+
+            const { rate } = star.dataset;
+            star.parentNode.dataset.rateTotal = star.dataset.rate;
+        });
+    }
 
 
 })

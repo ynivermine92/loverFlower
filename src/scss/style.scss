@@ -32,6 +32,8 @@
 
 /* page product */
 @import './slider-product';
+@import './experience';
+
 /* page product */
 @import './footer';
 // Libs
@@ -86,9 +88,6 @@ main {
     }
 }
 
-/* main  home*/
-.main-home {
-    &::before {
-        display: none;
-    }
-}
+
+
+

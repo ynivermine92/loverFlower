@@ -123,3 +123,11 @@ body {
 
     }
 }
+
+
+/* main  home*/
+.main-home {
+    &::before {
+        display: none;
+    }
+}
