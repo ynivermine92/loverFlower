@@ -1,0 +1,61 @@
+.related {
+  padding: 180px 0;
+
+  &__title {
+    color: rgba(67, 255, 210, 1);
+    font-size: 30px;
+    @extend %os-700;
+    margin-bottom: 25px;
+  }
+
+  &__sub-title {
+    margin-top: 20px;
+    margin-bottom: 86px;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    @extend %os-300;
+  }
+
+  &__side {
+    text-align: center;
+    display: block;
+  }
+
+  &__sub-title {
+    text-align: center;
+  }
+
+  @media (max-width: 990px) {
+    & {
+      padding: 80px 0;
+    }
+    .popular {
+      &__title {
+        font-size: 72px;
+      }
+    }
+  }
+
+  @media (max-width: 660px) {
+    & {
+      padding: 50px 0;
+    }
+    .popular {
+      padding: 50px 0;
+
+      &__title {
+        font-size: 40px;
+      }
+
+      &__sub-title {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  @media (max-width: 450px) {
+    & {
+      display: none;
+    }
+  }
+}

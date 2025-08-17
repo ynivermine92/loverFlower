@@ -1,0 +1,101 @@
+.slider-related {
+    .swiper {
+        &__text {
+            margin: 10px 0;
+            font-size: 20px;
+            letter-spacing: 4%;
+            @extend %os-400;
+            color: #fff;
+
+        }
+
+        &__price {
+            font-size: 14px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            @extend %os-700;
+            color: #fff;
+            display: block;
+        }
+
+        &__cart {
+            @extend %btnSlider;
+            text-decoration: none;
+            padding: 16px 76px;
+
+        }
+
+
+        &__link {
+            @extend %os-700;
+            color: rgb(217, 120, 172);
+            font-size: 12px;
+            transition: all 0.5s;
+
+            &:hover {
+                color: #43FFD2;
+                transition: all 0.5s;
+            }
+
+            &:hover .swiper__link-arrow {
+                fill: #43FFD2;
+                transition: all 0.5s;
+                margin-left: 20px;
+            }
+        }
+
+        &__link-arrow {
+            margin-left: 10px;
+            height: 6px;
+            width: 40px;
+            margin-top: 60px;
+            fill: rgb(217, 120, 172);
+            transition: all 0.5s;
+
+        }
+
+    }
+
+    @media (max-width: 1350px) {
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            display: none !important;
+        }
+    }
+
+    @media (max-width: 990px) {
+        .swiper {
+            &__cart {
+                text-align: center;
+                padding: 15px 15px;
+            }
+
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            display: none !important;
+        }
+    }
+
+    @media (max-width: 415px) {
+        .swiper-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .swiper-slide {
+            max-width: 100%;
+        }
+
+        .swiper-slide+.swiper-slide {
+            margin: 40px 0;
+        }
+
+        .swiper__link-arrow {
+            margin-top: 0;
+        }
+    }
+}
