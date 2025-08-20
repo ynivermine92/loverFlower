@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     function setupSelector(selectorId, cardClass) {
         const select = document.getElementById(selectorId);
+        if (!select) return; 
+
         const cards = document.querySelectorAll(cardClass);
-  
+
         function showSelectedCard() {
             const selectedValue = select.value;
             cards.forEach(function(card) {
@@ -15,20 +17,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         }
-  
-  
+
         select.addEventListener('change', showSelectedCard);
-  
-  
+
         cards.forEach(card => card.style.display = 'none'); 
         const firstCard = document.getElementById(select.value);
         if (firstCard) {
             firstCard.style.display = 'block';
         }
     }
-  
-  
+
     setupSelector('card-selector', '.card');
-  
-    setupSelector('card-selector2', '.card2');
-  });
+});

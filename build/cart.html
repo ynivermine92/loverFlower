@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cart</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.min.css" />
+  </head>
+
+  <body class="body__cart">
+    <!-- Header -->
+    <header>
+  <!-- Navbar -->
+  <div class="header" data-aos-duration="2000" data-aos="fade-down">
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html"> <img src="img/header/logo.png" alt="" /></a>
+
+          <button class="burger">
+            <span></span>
+          </button>
+        </div>
+        <nav>
+          <ul class="menu">
+            <li class="menu__item menu__search menu__search-mob">
+              <svg class="menu__search-svg">
+                <use xlink:href="img/header/searsh.svg#searsh"></use>
+              </svg>
+              <span class="menu__search-text">Пошук</span>
+            </li>
+            <li class="menu__item">
+              <a href="index.html" class="menu__item-link" data-scroll>Головна</a>
+            </li>
+            <li class="menu__item">
+              <a href="shop.html" class="menu__item-link" data-scroll>Каталог</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__item-link" data-scroll
+                >Доставка та оплата</a
+              >
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__item-link" data-scroll>Про нас</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__item-link" data-scroll>Контакти</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__item-link" data-scroll>FAQ</a>
+            </li>
+            <li class="menu__item menu__search menu__search-desktop">
+              <svg class="menu__search-svg">
+                <use xlink:href="img/header/searsh.svg#searsh"></use>
+              </svg>
+              <span class="menu__search-text">Пошук</span>
+            </li>
+            <li class="menu__item menu__item-mob">
+              <div class="sidebar__box">
+                <a class="sidebar__link" href="#">zakaz@gmail.com</a>
+                <span class="sidebar__text"
+                  >Доставка 24/7 по договоренности с оператором
+                </span>
+              </div>
+            </li>
+            <li class="menu__item menu__item-mob">
+              <div class="sidebar__box">
+                <p class="sidebar__link">ул. Тимирязева 67</p>
+                <span>10:00 до 21:00</span>
+                <span>без выходных</span>
+              </div>
+            </li>
+
+            <li class="menu__item menu__item-mob">
+              <div class="menu__iten-wrapper">
+                <p>Политика конфиденциальности</p>
+                <p>Обработка персональных данных</p>
+              </div>
+            </li>
+            <li class="menu__item menu__item-mob">
+              <a class="sidebar__link" href="tel:+375291136969"
+                >+375 (29) 113-69-69</a
+              >
+            </li>
+            <li class="menu__item menu__item-mob">
+              <ul class="sidebar__cocial-items">
+                <li class="sidebar__cocial-item">
+                  <a class="sidebar__cocial-link" href="cart.html">
+                    <svg class="sidebar__cocial-svg">
+                      <use xlink:href="img/sidebar/sea.svg#sea"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="sidebar__cocial-item">
+                  <a class="sidebar__cocial-link" href="#">
+                    <svg class="sidebar__cocial-svg">
+                      <use xlink:href="img/sidebar/web.svg#web"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="sidebar__cocial-item">
+                  <a class="sidebar__cocial-link" href="#">
+                    <svg class="sidebar__cocial-svg">
+                      <use xlink:href="img/sidebar/tell.svg#tell"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+        <ul class="header__user-items">
+          <li class="header__user-item">
+            <a class="sidebar__link" href="tel:+375291136969"
+              >+375 (29) 113-69-69</a
+            >
+          </li>
+          <li class="header__user-item">
+            <a class="header__user-item-link" href="cart.html">
+              <svg class="cart__svg">
+                <use xlink:href="img/sidebar/cart.svg#cart"></use>
+              </svg>
+              <div class="sidebar__cart-sum">0</div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="search">
+    <div class="conanter">
+      <div class="search__wrarpper">
+        <form class="search__form" action="#">
+          <input class="search__input" placeholder="поиск" />
+          <button class="search__btn">
+            <svg class="menu__search-svg">
+              <use xlink:href="img/header/searsh.svg#searsh"></use>
+            </svg>
+          </button>
+        </form>
+        <div class="search__btn-clouse">X</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <!-- Main Page -->
+    <main>
+      <section data-aos="fade-right" class="top">
+  <div class="container">
+    <div class="bredcrumbs">
+      <ul class="bredcrumbs__list">
+        <li class="bredcrumbs__item">
+          <a class="bredcrumbs__link" href="#">Главная</a>
+        </li>
+        <li class="bredcrumbs__item">
+          <span class="bredcrumbs__separator">/</span>
+          <a class="bredcrumbs__link" href="#">оформление заказа</a>
+        </li>
+      </ul>
+    </div>
+    <div class="top__wrapper">
+      <h2 class="title title__l"><span>оформление</span><span>заказа</span></h2>
+
+    </div>
+  </div>
+</section>
+
+      <section class="cart">
+        <div class="container">
+          <div class="cart__wrapper">
+            <div class="cart__title">Оформление заказа</div>
+            <form class="form" action="#">
+              <div class="form__sub-title">Контактные данные</div>
+              <ul class="cart__items cart__contact">
+                <li class="cart__item form__box">
+                  <span class="form__input-name">Ваше имя*</span>
+                  <input
+                    class="form__input input__name"
+                    type="text"
+                    placeholder="Введите ваше имя"
+                  />
+                </li>
+                <li class="cart__item form__box">
+                  <span class="form__input-name">Ваш телефон*</span>
+                  <input
+                    class="form__input input__tell"
+                    type="tel"
+                    placeholder="+7 (977) 777-77-77"
+                  />
+                </li>
+                <li class="cart__item form__box">
+                  <span class="form__input-name">Ваш e-mail*</span>
+                  <input
+                    class="form__input input__mail"
+                    type="email"
+                    placeholder="Введите вашу почту"
+                  />
+                </li>
+                <li class="cart__item form__box">
+                  <span class="form__input-name"
+                    >Телефон получателя (необязательно)</span
+                  >
+                  <input
+                    class="form__input input__user-tell"
+                    type="tel"
+                    placeholder="+7 (977) 777-77-77"
+                  />
+                </li>
+                <li class="cart__item form__box">
+                  <span class="form__input-name"
+                    >Имя получателя (необязательно)</span
+                  >
+                  <input
+                    class="form__input input__user-name"
+                    type="name"
+                    placeholder="Введите имя получателя"
+                  />
+                </li>
+                <li class="cart__item form__box">
+                  <span class="form__input-name">Комментарий к заказу</span>
+                  <input
+                    class="form__input input__user-name"
+                    type="text"
+                    placeholder="Примечания к вашеу заказу,  особые пожелания отделу доставки"
+                  />
+                </li>
+              </ul>
+              <div class="cart__title">Доставка</div>
+              <ul class="cart__items cart__delivery">
+                <li class="cart__item">
+                  <input class="form__input-radio" type="radio" />
+                  <span class="form__name-radio">Самовывоз</span>
+                </li>
+                <li class="cart__item">
+                  <input class="form__input-radio" type="radio" />
+                  <span class="form__name-radio">Доставка курьером</span>
+                </li>
+
+                <li class="cart__item">
+                  <div class="select">
+                    <input
+                      class="select__input"
+                      type="hidden"
+                      name="select"
+                      value=""
+                    />
+                    <button class="select__btn">
+                      <span class="select__text">Выберите город</span>
+                      <svg
+                        class="select__icon"
+                        viewBox="0 0 20 18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M15.8081 17.0664C15.7221 17.1709 15.614 17.2551 15.4916 17.3128C15.3691 17.3705 15.2354 17.4002 15.1001 17.4C14.9824 17.4007 14.8657 17.3777 14.757 17.3323C14.6484 17.2869 14.55 17.2202 14.4677 17.136L10.8629 13.5264C10.6943 13.3576 10.5997 13.1289 10.5997 12.8904C10.5997 12.6519 10.6943 12.4231 10.8629 12.2544C10.9463 12.1707 11.0454 12.1042 11.1545 12.0589C11.2637 12.0135 11.3807 11.9902 11.4989 11.9902C11.6171 11.9902 11.7341 12.0135 11.8432 12.0589C11.9524 12.1042 12.0515 12.1707 12.1349 12.2544L14.2001 14.3328V1.49999C14.2001 1.2613 14.2949 1.03238 14.4637 0.863594C14.6325 0.694812 14.8614 0.599991 15.1001 0.599991C15.3388 0.599991 15.5677 0.694812 15.7365 0.863594C15.9053 1.03238 16.0001 1.2613 16.0001 1.49999V14.3208L18.0665 12.2592C18.1499 12.1756 18.2489 12.1093 18.3579 12.0641C18.467 12.0189 18.5838 11.9956 18.7019 11.9956C18.8199 11.9956 18.9368 12.0189 19.0458 12.0641C19.1549 12.1093 19.2539 12.1756 19.3373 12.2592C19.5058 12.4279 19.6005 12.6567 19.6005 12.8952C19.6005 13.1337 19.5058 13.3624 19.3373 13.5312L15.8069 17.0664H15.8081ZM5.60809 0.933591C5.52212 0.829053 5.41402 0.744903 5.29158 0.687213C5.16915 0.629524 5.03543 0.599733 4.90009 0.599991C4.78235 0.599304 4.66569 0.622324 4.55704 0.66768C4.44839 0.713036 4.34999 0.779799 4.26769 0.863991L0.664087 4.47359C0.495546 4.64234 0.400879 4.87109 0.400879 5.10959C0.400879 5.34809 0.495546 5.57684 0.664087 5.74559C0.747484 5.82933 0.846598 5.89578 0.95574 5.94112C1.06488 5.98646 1.1819 6.0098 1.30009 6.0098C1.41827 6.0098 1.53529 5.98646 1.64443 5.94112C1.75358 5.89578 1.85269 5.82933 1.93609 5.74559L4.00009 3.66839V16.5C4.00009 16.7387 4.09491 16.9676 4.26369 17.1364C4.43247 17.3052 4.66139 17.4 4.90009 17.4C5.13878 17.4 5.3677 17.3052 5.53648 17.1364C5.70527 16.9676 5.80009 16.7387 5.80009 16.5V3.67919L7.86649 5.74079C7.94986 5.82435 8.0489 5.89064 8.15793 5.93588C8.26696 5.98111 8.38385 6.00439 8.50189 6.00439C8.61993 6.00439 8.73681 5.98111 8.84584 5.93588C8.95487 5.89064 9.05391 5.82435 9.13729 5.74079C9.30583 5.57204 9.4005 5.34329 9.4005 5.10479C9.4005 4.86629 9.30583 4.63754 9.13729 4.46879L5.60689 0.93239L5.60809 0.933591Z"
+                        />
+                      </svg>
+                    </button>
+                    <ul class="select__list">
+                      <li class="select__item" data-value="popular">
+                       Киев
+                      </li>
+                      <li class="select__item" data-value="cheaper">
+                       Харьков
+                      </li>
+                      <li class="select__item" data-value="expensive">
+                       Одесса
+                      </li>
+                      <li class="select__item" data-value="high rating">
+                        Львив
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__wrapper">
+      <ul class="footer__items">
+        <li class="footer__item logo-first">
+          <img class="footer__logo" src="img/header/logo.png" alt="" />
+        </li>
+        <li class="footer__item">
+          <div class="footer__sub-title">реквизиты</div>
+        </li>
+        <li class="footer__item">
+          <p class="footer__item-text">
+            ООО «Ловефлове» 220035, Республика Беларусь, г. Минск, ул.
+            Тимирязева д. 67, комн. 112 (пом.11) УНП 193263781, р/с
+            BY55MTBK30120001093300096372 ЗАО «МТБанк», БИК MTBKBY22 220007, г.
+            Минск, улица Толстого
+          </p>
+        </li>
+      </ul>
+      <ul class="footer__items footer__nav">
+        <li class="footer__item">
+          <div class="footer__sub-title">Каталог</div>
+        </li>
+        <li class="footer__item">
+          <a class="footer__item-link" href="#">Популярное</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__item-link" href="#">Сухоцветы</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__item-link" href="#">Букеты роз</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__item-link" href="#">Композиции из цветов</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__item-link" href="#">Индивидуальный букет</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__item-link" href="#">Букет на праздник</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__item-link" href="#">Упаковка подарков</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__item-link" href="#">Шары</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__item-link" href="#">Открытки</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__item-link" href="#">Конверты</a>
+        </li>
+      </ul>
+      <ul class="footer__items footer__nav">
+        <li class="footer__item"><div class="footer__sub-title">Букет</div></li>
+        <li class="footer__item">
+          <a class="footer__item-link" href="#">Для девушки</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__item-link" href="#">Для мужчины</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__item-link" href="#">Для жены</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__item-link" href="#">Для мамы</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__item-link" href="#">Для коллеги</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__item-link" href="#">Для начальника</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__item-link" href="#">Для дочки</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__item-link" href="#">Для детей</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__item-link" href="#">Для женщины</a>
+        </li>
+      </ul>
+
+      <ul class="footer__items footer__items-details">
+        <li class="footer__item footer__item-logo">
+          <img class="footer__logo" src="img/header/logo.png" alt="" />
+        </li>
+        <li class="footer__item"><div class="footer__sub-title">Букет</div></li>
+        <li class="footer__item">
+          <a class="footer__item-link" href="#">Доставка и оплата </a>
+        </li>
+
+        <li class="footer__item">
+          <a class="footer__item-link" href="#">О нас</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__item-link" href="#">FAQ</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__item-link" href="#">Контакты</a>
+        </li>
+        <li class="footer__item">
+          <a class="footer__item-link" href="#">для корпоративных клиентов</a>
+        </li>
+      </ul>
+
+      <ul class="footer__items">
+        <li class="footer__item">
+          <a
+            class="footer__sub-title footer__mail"
+            href="mailto:zakaz@loverflower.by"
+            >zakaz@loverflower.by</a
+          >
+          <p class="footer__item-text">
+            Доставка 24/7 по договоренности с оператором
+          </p>
+        </li>
+        <li class="footer__item">
+          <div class="footer__sub-title">ул. Тимирязева 67</div>
+          <span>10:00 до 21:00</span>
+          <span>без выходных</span>
+        </li>
+        <li class="footer__item">
+          <a class="footer__tell footer__item-link" href="tel:+375291136969"
+            >+375 (29) 113-69-69</a
+          >
+          <span>прием звонков круглосуточно</span>
+        </li>
+        <li class="footer__item">
+          <ul class="footer__item-social">
+            <a class="footer__item-link" href="#">
+              <svg class="footer__item-svg sidebar__cocial-svg">
+                <use xlink:href="img/sidebar/sea.svg#sea"></use>
+              </svg>
+            </a>
+            <a class="footer__item-link" href="#">
+              <svg class="footer__item-svg sidebar__cocial-svg">
+                <use xlink:href="img/sidebar/web.svg#web"></use>
+              </svg>
+            </a>
+            <a class="footer__item-link" href="#">
+              <svg class="footer__item-svg sidebar__cocial-svg">
+                <use xlink:href="img/sidebar/tell.svg#tell"></use>
+              </svg>
+            </a>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+  </body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./js/scripts.min.js"></script>
+</html>

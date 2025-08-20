@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>сheckout</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.min.css" />
+  </head>
+
+  <body class="body__сheckout">
+    <!-- Header -->
+    @@include('./html/_header.html')
+    <!-- Main Page -->
+    <main>
+      @@include('./html/_top-сart.html')
+      <section class="сheckout">
+        <div class="container">
+          <div class="сheckout__wrapper">
+            <div class="сheckout__title">Оформление заказа</div>
+            <form class="form" action="#">
+              <div class="form__sub-title">Контактные данные</div>
+              <ul class="сheckout__items сheckout__contact">
+                <li class="сheckout__item form__box">
+                  <span class="form__input-name">Ваше имя*</span>
+                  <input
+                    class="form__input input__name"
+                    type="text"
+                    placeholder="Введите ваше имя"
+                  />
+                </li>
+                <li class="сheckout__item form__box">
+                  <span class="form__input-name">Ваш телефон*</span>
+                  <input
+                    class="form__input input__tell"
+                    type="tel"
+                    placeholder="+7 (977) 777-77-77"
+                  />
+                </li>
+                <li class="сheckout__item form__box">
+                  <span class="form__input-name">Ваш e-mail*</span>
+                  <input
+                    class="form__input input__mail"
+                    type="email"
+                    placeholder="Введите вашу почту"
+                  />
+                </li>
+                <li class="сheckout__item form__box">
+                  <span class="form__input-name"
+                    >Телефон получателя (необязательно)</span
+                  >
+                  <input
+                    class="form__input input__user-tell"
+                    type="tel"
+                    placeholder="+7 (977) 777-77-77"
+                  />
+                </li>
+                <li class="сheckout__item form__box">
+                  <span class="form__input-name"
+                    >Имя получателя (необязательно)</span
+                  >
+                  <input
+                    class="form__input input__user-name"
+                    type="name"
+                    placeholder="Введите имя получателя"
+                  />
+                </li>
+                <li class="сheckout__item form__box">
+                  <span class="form__input-name">Комментарий к заказу</span>
+                  <input
+                    class="form__input input__user-name"
+                    type="text"
+                    placeholder="Примечания к вашеу заказу,  особые пожелания отделу доставки"
+                  />
+                </li>
+              </ul>
+              <div class="сheckout__title">Доставка</div>
+              <ul class="сheckout__items сheckout__delivery">
+                <li class="сheckout__item">
+                  <input class="form__input-radio" type="radio" />
+                  <span class="form__name-radio">Самовывоз</span>
+                </li>
+                <li class="сheckout__item">
+                  <input class="form__input-radio" type="radio" />
+                  <span class="form__name-radio">Доставка курьером</span>
+                </li>
+
+                <li class="сheckout__item">
+                  <!-- selector -->
+                  <div class="selector">
+                    <div class="currency__social-box"></div>
+                    <div class="container">
+                      <div class="selector__box">
+                        <div class="selector__inner">
+                          <select id="card-selector2" class="selector__wrapper">
+                            <option value="card4">June</option>
+                            <option value="card5">July</option>
+                            <option value="card6">August</option>
+                            <option value="card6">September</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div id="card4" class="card2">
+                        <ul class="cart2__items">
+                          <li class="cart2__item">
+                            <span class="cart2__min">Minimum Price</span>
+                            <span class="cart2__sum">$59,944.84</span>
+                          </li>
+                          <li class="cart2__item">
+                            <span class="cart2__max">Minimum Price</span>
+                            <span class="cart2__sum">$$73,265.rrrr92</span>
+                          </li>
+                          <li class="cart2__item">
+                            <span class="cart2__price">Minimum Price</span>
+                            <span class="cart2__sum"
+                              >$$66,605.rrrrrrrwwwwwwwwwww38</span
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                      <div id="card5" class="card2">
+                        <ul class="cart2__items">
+                          <li class="cart2__item">
+                            <span class="cart2__text"
+                              >ffffffffffffffffffffffff</span
+                            >
+                            <span class="cart2__sum">$59,944.84</span>
+                          </li>
+                          <li class="cart2__item">
+                            <span class="cart2__text"
+                              >Missssssssssnimum Price</span
+                            >
+                            <span class="cart2__sum">$$73,265.92</span>
+                          </li>
+                          <li class="cart2__item">
+                            <span class="cart2__text">Minimum Price</span>
+                            <span class="cart2__sum">$$66,605.38</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div id="card6" class="card2">
+                        <ul class="cart2__items">
+                          <li class="cart2__item">
+                            <span class="cart2__text"
+                              >Mwrrrrrrrrrrrinimum Price</span
+                            >
+                            <span class="cart2__sum">$59,944.84</span>
+                          </li>
+                          <li class="cart2__item">
+                            <span class="cart2__text"
+                              >Minirwwrrrrrrrrmum Price</span
+                            >
+                            <span class="cart2__sum">$$73,265.92</span>
+                          </li>
+                          <li class="cart2__item">
+                            <span class="cart2__text">Minimum Price</span>
+                            <span class="cart2__sum">$$66,605.38</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- selector -->
+                </li>
+              </ul>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    @@include('./html/_footer.html')
+  </body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./js/scripts.min.js"></script>
+</html>

@@ -886,8 +886,6 @@ header {
   letter-spacing: 0.15em;
 }
 
-/* general */
-
 /* page home */
 
 .home {
@@ -1865,7 +1863,10 @@ header {
           justify-content: end;
 }
 
-/* section home */
+.special[data-aos=fade-left] {
+  position: relative;
+  z-index: 1;
+}
 
 /* page shop */
 
@@ -2278,8 +2279,6 @@ input[type=range] {
   font-size: 30px;
   top: -13px;
 }
-
-/* page shop */
 
 /* page product */
 
@@ -2960,7 +2959,70 @@ input[type=range] {
   transition: all 0.5s;
 }
 
-/* page product */
+/* page checkout */
+
+.сheckout .selector {
+  display: none;
+}
+
+.сheckout .card {
+  display: none;
+  border: 1px solid #ccc;
+  margin-top: 16px;
+}
+
+.сheckout .card .tabs__content-item {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.сheckout .card.active {
+  display: block;
+}
+
+.сheckout .selector__wrapper {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid rgb(211, 211, 212);
+  border-radius: 4px;
+  padding: 6px 16px 6px 16px;
+  background: rgb(255, 255, 255);
+  width: 100%;
+  position: relative;
+}
+
+.сheckout .selector__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 350px;
+  width: 100%;
+  position: relative;
+}
+
+.сheckout .selector__inner::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/currency/select.png");
+  width: 10px;
+  height: 10px;
+  z-index: 1;
+  right: 12px;
+  top: 10px;
+}
 
 .footer {
   background: black;
@@ -4222,6 +4284,16 @@ main::before {
 
   .experience .tabs__header-item {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .сheckout .selector {
+    display: block;
+  }
+
+  .сheckout .tabs__content-item {
+    overflow-x: auto;
   }
 }
 

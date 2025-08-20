@@ -3,6 +3,7 @@
     /* обязательно для позиционирования ::after */
     padding: 262px 0 200px 0px;
     z-index: 1;
+    
 
     &::after {
         content: '';
@@ -128,4 +129,10 @@
         }
 
     }
+}
+
+
+.special[data-aos="fade-left"] {
+  position: relative;
+  z-index: 1;
 }

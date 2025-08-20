@@ -9,7 +9,6 @@
 @import "./search";
 @import "./top";
 @import "./pagination";
-/* general */
 
 /* page home */
 @import "./home";
@@ -21,13 +20,11 @@
 @import "./special";
 @import "./questions";
 @import "./social";
-/* section home */
 
 /* page shop */
 @import "./categories";
 @import "./select-tab";
 @import "./filter";
-/* page shop */
 
 /* page product */
 @import "./slider-product";
@@ -35,9 +32,14 @@
 @import "./related";
 @import "./slider-related";
 
+/* page checkout */
+@import "./сheckout";
 
 
-/* page product */
+
+
+
+
 @import "./footer";
 
 
