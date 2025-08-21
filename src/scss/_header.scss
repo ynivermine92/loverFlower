@@ -73,6 +73,13 @@ header {
         right: -7px;
     }
 
+    &__user-cart.events {
+        pointer-events: none;
+        user-select: none;
+        opacity: 0.5;
+        cursor: not-allowed;
+
+    }
 }
 
 .navbar {
@@ -141,7 +148,7 @@ header {
             &:after {
                 transform: scale(1);
             }
-        }  
+        }
 
     }
 
@@ -200,10 +207,12 @@ header {
             z-index: 2;
             animation: fade 0.1s linear;
             gap: 20px;
-            .sidebar__link{
+
+            .sidebar__link {
                 margin-bottom: 10px;
             }
-            .menu__iten-wrapper{
+
+            .menu__iten-wrapper {
                 line-height: 1.5em;
             }
         }

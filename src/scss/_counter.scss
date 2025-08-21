@@ -1,0 +1,58 @@
+
+  .counter {
+    width: 100%;
+    max-width: 100px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 0.5px solid rgb(255, 255, 255);
+
+    &__input {
+      width: 50px;
+      height: 100%;
+      color: #fff;
+      font-family: "Roboto", Arial, sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      text-align: center;
+      outline: none;
+      padding: 0 5px;
+      background: transparent;
+    }
+
+    &__btn {
+      width: 40px;
+      height: 100%;
+      background: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &:hover {
+        background: #43ffd2;
+      }
+
+      &.minus {
+        background-image: url(https://i.postimg.cc/d0R1H0hH/minus.png);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+      }
+
+      &.plus {
+        background-image: url(https://i.postimg.cc/Gtfh88f2/plus.png);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+      }
+
+      &.disabled {
+        pointer-events: none;
+      }
+    }
+  }
+
+
+  

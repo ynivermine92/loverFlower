@@ -427,39 +427,78 @@ window.addEventListener("DOMContentLoaded", () => {
 
   aoutoHedideng();
 
-  /* checkout */
+  /*checkout  input dropdown*/
+  document.querySelectorAll(".select").forEach((select) => {
+    const selectBtn = select.querySelector(".select__btn");
+    const selectText = select.querySelector(".select__text");
+    const selectList = select.querySelector(".select__list");
+    const selectItems = selectList.querySelectorAll(".select__item");
+    const selectInput = select.querySelector(".select__input");
 
-  if (document.body.classList.contains("сheckout")) {
-    document.addEventListener("DOMContentLoaded", function () {
-      function setupSelector(selectorId, cardClass) {
-        const select = document.getElementById(selectorId);
-        const cards = document.querySelectorAll(cardClass);
-
-        function showSelectedCard() {
-          const selectedValue = select.value;
-          cards.forEach(function (card) {
-            if (card.id === selectedValue) {
-              card.classList.add("active");
-              card.style.display = "block";
-            } else {
-              card.classList.remove("active");
-              card.style.display = "none";
-            }
-          });
-        }
-
-        select.addEventListener("change", showSelectedCard);
-
-        cards.forEach((card) => (card.style.display = "none"));
-        const firstCard = document.getElementById(select.value);
-        if (firstCard) {
-          firstCard.style.display = "block";
-        }
-      }
-
-      setupSelector("card-selector", ".card");
-
-      setupSelector("card-selector2", ".card2");
+    selectBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      selectBtn.classList.toggle("active");
+      selectList.classList.toggle("active");
+      selectList.style.maxHeight
+        ? (selectList.style.maxHeight = null)
+        : (selectList.style.maxHeight = selectList.scrollHeight + "px");
     });
+
+    let selectClose = () => {
+      selectBtn.classList.remove("active");
+      selectList.classList.remove("active");
+      selectList.removeAttribute("style");
+    };
+
+    for (let i = 0; i < selectItems.length; i++) {
+      selectItems[0].click();
+      selectItems[i].addEventListener("click", () => {
+        selectItems.forEach((el) => {
+          el.classList.remove("active");
+        });
+        selectItems[i].classList.add("active");
+        selectText.innerText = selectItems[i].innerText;
+        selectInput.value = selectItems[i].dataset.value;
+        selectClose();
+      });
+    }
+
+    document.addEventListener("mouseup", (e) => {
+      if (!select.contains(e.target)) selectClose();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") selectClose();
+    });
+  });
+
+
+
+
+  /*checkout  input dropdown*/
+  if (document.body.classList.contains("body__сheckout")) {
+    const cart = document.querySelector(".header__user-cart");
+
+    const checkoutWidth = () => {
+      if (window.innerWidth > 1000) {
+        cart.classList.add("events");
+      } else {
+        cart.classList.remove("events");
+      }
+    };
+    checkoutWidth();
+    window.addEventListener("resize", checkoutWidth);
   }
+
+
 });
+
+
+
+
+
+
+
+
+
+
