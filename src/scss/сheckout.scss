@@ -1,12 +1,29 @@
 .сheckout {
   padding-bottom: 180px;
-  
+
+  .top__wrapper {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background: url('/img/checkout/text1.png');
+      width: 305px;
+      height: 220px;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      left: 50%;
+      bottom: -180px;
+    }
+  }
+
   &__title {
     font-size: 30px;
     color: rgba(67, 255, 210, 1);
     @extend %os-700;
     padding-top: 60px;
     margin-bottom: 40px;
+
   }
 
   &__items {
@@ -235,6 +252,18 @@
     position: relative;
     display: flex;
     justify-content: space-between;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background: url('/img/checkout/text2.png');
+      width: 305px;
+      height: 220px;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      bottom: -100px;
+      left: 30%;
+    }
   }
 
 
@@ -342,6 +371,20 @@
 
     .basket {
       display: none;
+    }
+  }
+
+  @media(max-width: 700px) {
+    & {
+      &__wrapper-box {
+        &::before {
+          content: '';
+          right: 0;
+          left: unset;
+          width: 200px;
+          height: 120px;
+        }
+      }
     }
   }
 

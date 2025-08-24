@@ -56,6 +56,12 @@
         font-size: 14px;
         @extend %os-400;
         line-height: 1.5rem;
+        transition: all 0.5s;
+
+        &:hover {
+            transform: scale(1.01);
+            transition: all 0.5s;
+        }
     }
 
 
@@ -196,7 +202,7 @@
         &__item {
             margin-top: 15px;
         }
-        
+
     }
 
 }

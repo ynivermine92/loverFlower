@@ -1,0 +1,164 @@
+.cart {
+    &.active {
+        backdrop-filter: blur(5px);
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        z-index: 3;
+    }
+
+    &__inner {
+        overflow-y: auto;
+        position: fixed;
+        top: 0;
+        right: -420px;
+        width: 420px;
+        height: 100vh;
+        padding: 20px 30px;
+        transition: all 0.5s;
+        background: url(/img/cart/cart.png);
+        color: #fff;
+        background-size: 100%;
+
+        &.active {
+            right: 0;
+            transition: all 0.5s;
+        }
+    }
+
+    &__box-wrapper {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 0;
+    }
+
+    &__title {
+        font-size: 30px;
+        @extend %os-700;
+        color: #43FFD2;
+    }
+
+    &__clouse {
+        height: 30px;
+        width: 30px;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+        }
+    }
+
+
+    &__item {
+        border: 1px solid rgba(85, 85, 85, 1);
+        border-left: none;
+        border-right: none;
+        max-width: 360px;
+        padding: 20px 0;
+
+        &__box {
+            padding: 0;
+        }
+    }
+
+    &__sub-title {
+        margin-bottom: 30px;
+        font-size: 14px;
+        line-height: 1.3em;
+        @extend %os-400;
+        text-transform: uppercase;
+    }
+
+    &__image {
+        width: 60px;
+        height: 80px;
+        margin-right: 30px;
+    }
+
+    &__wrapper {
+        align-items: start;
+
+    }
+
+    &__wrapper-inner {
+        margin-left: 120px;
+    }
+
+    &__prace {
+        color: rgba(67, 255, 210, 1);
+        font-size: 14px;
+        @extend %os-700;
+        text-transform: uppercase;
+    }
+
+    &__delete {
+        margin-top: 44px;
+        font-size: 10px;
+        @extend %os-400;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    &__link {
+        margin-top: 50px;
+        padding: 20px;
+        width: 100%;
+        text-align: center;
+        border: 1px solid #fff;
+        background: transparent;
+        color: #fff;
+        @extend %btn;
+
+        &:hover {
+            border: 1px solid transparent;
+
+        }
+    }
+
+    .counter__input {
+        max-width: 100px;
+    }
+
+    @media (max-width:500px) {
+        & {
+            &__inner {
+                width: 100%;
+                right: -600px;
+            }
+
+            &__item {
+                max-width: 100%;
+            }
+
+            &__image {
+                margin-right: 0px;
+            }
+
+            &__wrapper-inner {
+                margin-left: 0;
+            }
+        }
+    }
+
+    @media (max-width:340px) {
+        & {
+            &__sub-title {
+                font-size: 12px;
+            }
+        }
+    }
+}

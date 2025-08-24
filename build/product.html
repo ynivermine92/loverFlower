@@ -5,13 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>product</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+    />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/style.min.css" />
   </head>
 
   <body class="product" style="background-image: url(/img/product/product.png)">
     <!-- Header -->
-        <header>
+    <header>
   <!-- Navbar -->
   <div class="header" data-aos-duration="2000" data-aos="fade-down">
     <div class="container">
@@ -119,7 +123,7 @@
             >
           </li>
           <li class="header__user-item  header__user-cart">
-            <a class="header__user-item-link" href="checkout.html">
+            <a class="header__user-item-link" href="#">
               <svg class="cart__svg">
                 <use xlink:href="img/sidebar/cart.svg#cart"></use>
               </svg>
@@ -150,7 +154,7 @@
 
     <!-- Main Page -->
     <main>
-          <section data-aos="fade-right" class="top">
+      <section data-aos="fade-right" class="top">
   <div class="container">
     <div class="bredcrumbs">
       <ul class="bredcrumbs__list">
@@ -181,8 +185,8 @@
     </div> -->
   </div>
 </section>
- 
-          <section class="slider-product">
+
+      <section class="slider-product">
   <div class="container">
     <div class="slider-product__wrapper">
       <a class="slider-product__back" href="#"><span><</span> НАЗАД</a>
@@ -192,13 +196,10 @@
             <div class="slider__prev">
               <img src="/img/product/arrov.png" alt="" />
             </div>
-            <!-- Кнопка для переключения на предыдущий слайд -->
 
             <div class="slider__thumbs">
               <div class="swiper-container thumbs-container">
-                <!-- Слайдер с превью -->
                 <div class="swiper-wrapper">
-                  
                   <div class="swiper-slide">
                     <div class="slider__image">
                       <img src="img/popular/slide-1.jpg" alt="" />
@@ -238,27 +239,57 @@
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div class="slider__image">
-                    <img src="img/popular/slide-1.jpg" alt="" />
+                    <a data-fancybox="product" href="img/popular/slide-1.jpg">
+                      <img
+                        class="special__box-image"
+                        src="img/popular/slide-1.jpg"
+                        alt=""
+                      />
+                    </a>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="slider__image">
-                    <img src="img/popular/slide-2.jpg" alt="" />
+                    <a data-fancybox="product" href="img/popular/slide-1.jpg">
+                      <img
+                        class="special__box-image"
+                        src="img/popular/slide-1.jpg"
+                        alt=""
+                      />
+                    </a>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="slider__image">
-                    <img src="img/popular/slide-2.jpg" alt="" />
+                    <a data-fancybox="product" href="img/popular/slide-2.jpg">
+                      <img
+                        class="special__box-image"
+                        src="img/popular/slide-2.jpg"
+                        alt=""
+                      />
+                    </a>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="slider__image">
-                    <img src="img/popular/slide-2.jpg" alt="" />
+                    <a data-fancybox="product" href="img/popular/slide-2.jpg">
+                      <img
+                        class="special__box-image"
+                        src="img/popular/slide-2.jpg"
+                        alt=""
+                      />
+                    </a>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="slider__image">
-                    <img src="img/popular/slide-2.jpg" alt="" />
+                    <a data-fancybox="product" href="img/popular/slide-2.jpg">
+                      <img
+                        class="special__box-image"
+                        src="img/popular/slide-2.jpg"
+                        alt=""
+                      />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -309,8 +340,8 @@
     </div>
   </div>
 </section>
- 
-          <section class="experience">
+
+      <section class="experience">
   <div class="container">
     <div class="experience__wrapper">
       <div class="experience__sub-title">Дополнительно к заказу:</div>
@@ -669,8 +700,7 @@
     </div>
   </div>
 </section>
- 
-          <section class="related">
+ <section class="related">
   <div class="container">
     <div class="related__wrapper">
       <h2 class="related__title">вам может понравиться:</h2>
@@ -680,36 +710,66 @@
     <!-- Slider main container -->
 
     <div class="container">
-      <div class="relatedSwiper swiper">
+      <div class="relatedSwiper">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slides -->
           <div class="swiper-slide">
-            <img src="img/popular/slide-1.jpg" alt="#" />
+            <a data-fancybox="related" href="img/popular/slide-1.jpg">
+              <img
+                class="special__box-image"
+                src="img/popular/slide-1.jpg"
+                alt=""
+              />
+            </a>
             <p class="swiper__text">лучший день</p>
             <span class="swiper__price">167.000</span>
             <a class="swiper__cart" href="#">в корзину</a>
           </div>
           <div class="swiper-slide">
-            <img src="img/popular/slide-1.jpg" alt="#" />
+            <a data-fancybox="related" href="img/popular/slide-1.jpg">
+              <img
+                class="special__box-image"
+                src="img/popular/slide-1.jpg"
+                alt=""
+              />
+            </a>
             <p class="swiper__text">лучший день</p>
             <span class="swiper__price">167.000</span>
             <a class="swiper__cart" href="#">в корзину</a>
           </div>
           <div class="swiper-slide">
-            <img src="img/popular/slide-1.jpg" alt="#" />
+            <a data-fancybox="related" href="img/popular/slide-1.jpg">
+              <img
+                class="special__box-image"
+                src="img/popular/slide-1.jpg"
+                alt=""
+              />
+            </a>
             <p class="swiper__text">лучший день</p>
             <span class="swiper__price">167.000</span>
             <a class="swiper__cart" href="#">в корзину</a>
           </div>
           <div class="swiper-slide">
-            <img src="img/popular/slide-1.jpg" alt="#" />
+            <a data-fancybox="related" href="img/popular/slide-1.jpg">
+              <img
+                class="special__box-image"
+                src="img/popular/slide-1.jpg"
+                alt=""
+              />
+            </a>
             <p class="swiper__text">лучший день</p>
             <span class="swiper__price">167.000</span>
             <a class="swiper__cart" href="#">в корзину</a>
           </div>
           <div class="swiper-slide">
-            <img src="img/popular/slide-1.jpg" alt="#" />
+            <a data-fancybox="related" href="img/popular/slide-1.jpg">
+              <img
+                class="special__box-image"
+                src="img/popular/slide-1.jpg"
+                alt=""
+              />
+            </a>
             <p class="swiper__text">лучший день</p>
             <span class="swiper__price">167.000</span>
             <a class="swiper__cart" href="#">в корзину</a>
@@ -729,7 +789,7 @@
 
     </main>
     <!-- Footer -->
-       <footer class="footer">
+    <footer class="footer">
   <div class="container">
     <div class="footer__wrapper">
       <ul class="footer__items">
@@ -882,8 +942,9 @@
     </div>
   </div>
 </footer>
- 
+
   </body>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
   <script src="./js/scripts.min.js"></script>
 </html>

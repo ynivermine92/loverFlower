@@ -1,6 +1,16 @@
 .popular {
     padding-top: 180px;
 
+    .swiper-slide img {
+        cursor: pointer;
+        transition: all 0.5s;
+
+        &:hover {
+            transform: scale(1.02);
+            transition: all 0.5s;
+        }
+    }
+
     &__title {
         font-size: 100px;
         @extend %co-400;

@@ -1,6 +1,8 @@
 .related {
   padding: 180px 0;
-
+  .relatedSwiper{
+    overflow: hidden;
+  }
   &__title {
     color: rgba(67, 255, 210, 1);
     font-size: 30px;
