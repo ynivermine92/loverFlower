@@ -505,7 +505,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   /*  CartToggle */
   const cartToggle = () => {
-    let cartBtm = document.querySelectorAll('.cart__svg');
+    let cartBtm = document.querySelectorAll('.cart-user');
     let cart = document.querySelector('.cart__inner');
     let clouse = document.querySelector('.cart__clouse');
     let cartBlur = document.querySelector('.cart');
@@ -522,7 +522,6 @@ window.addEventListener("DOMContentLoaded", () => {
       })
 
     })
-
     clouse.addEventListener('click', () => {
       cart.classList.remove('active')
       document.body.classList.remove("locked")
@@ -534,6 +533,13 @@ window.addEventListener("DOMContentLoaded", () => {
 
   cartToggle()
 
+  if (document.body.classList.contains("body-payment")) {
+    const cart = document.querySelector(".header__user-cart");
+    cart.classList.add("events");
+
+  } else {
+    cart.classList.remove("events");
+  }
 
 });
 

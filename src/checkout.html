@@ -5,17 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>сheckout</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+    />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/style.min.css" />
   </head>
 
-  <body class="body__сheckout" style="background-image: url(/img/checkout/сheckout.png)">
+  <body
+    class="body__сheckout"
+    style="background-image: url(/img/checkout/сheckout.png)"
+  >
     <!-- Header -->
     <!-- Main Page -->
     @@include('./html/_header.html')
     <main>
       <section class="сheckout">
         @@include('./html/_top-сart.html')
+        @@include('./html/_cart.html')
         <div class="container">
           <div class="сheckout__wrapper-box">
             <form class="form" action="#">
@@ -354,5 +362,6 @@
     @@include('./html/_footer.html')
   </body>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
   <script src="./js/scripts.min.js"></script>
 </html>

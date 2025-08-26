@@ -27,6 +27,7 @@ body {
     @extend %os-300;
     background: rgb(30, 30, 30);
 
+
     &.locked {
         overflow: hidden;
 
@@ -57,7 +58,7 @@ body {
 
 
 .title {
-    font-size: 100px;
+    font-size: 90px;
     @extend %co-400;
     line-height: 1em;
     text-align: left;
@@ -70,70 +71,58 @@ body {
 }
 
 .title__r {
-    span {
-        text-align: start;
+    span:first-child {
+        text-align: center;
+        position: relative;
+        left: -12%;
     }
 
-
-
-    @media (max-width:990px) {
-        & {
-            font-size: 72px;
-        }
-
+    span:last-child {
+        position: relative;
+        text-align: center;
+        left: -24%;
     }
 
-    @media (max-width:660px) {
-        & {
-            font-size: 39px;
+    font-size: clamp(40px, 5vw, 72px);
+
+    @media (max-width: 500px) {
+
+        span:first-child,
+        span:last-child {
+            position: unset;
         }
 
-
+        span {
+            text-align: center;
+        }
     }
 }
 
+
 .title__l {
-    span+span {
+    font-size: clamp(40px, 5vw, 72px);
+
+    span:first-child {
+        text-align: center;
+        position: relative;
+        left: -12%;
+    }
+
+    span {
         text-align: center;
     }
 
-    @media (max-width:990px) {
-        & {
-            font-size: 72px;
-
-            span {
-                text-align: center;
-                margin-right: 0;
-            }
-
-            span:first-child {
-                padding-right: 290px;
-            }
-
-        }
-
-    }
-
-    @media (max-width:660px) {
-        & {
-            font-size: 39px;
-        }
-
+    @media (max-width: 500px) {
         span:first-child {
-            padding-right: 170px;
+            position: unset;
         }
 
-
-    }
-
-    @media (max-width:400px) {
-        & {
-            font-size: 30px !important;
+        span {
+            text-align: center;
         }
-
     }
-
 }
+
 
 
 /* main  home*/

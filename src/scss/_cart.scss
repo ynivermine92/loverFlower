@@ -5,6 +5,7 @@
         width: 100%;
         height: 100vh;
         z-index: 3;
+        top: 0;
     }
 
     &__inner {
@@ -23,6 +24,7 @@
         &.active {
             right: 0;
             transition: all 0.5s;
+            top: 0;
         }
     }
 
@@ -37,7 +39,7 @@
     &__box {
         display: flex;
         justify-content: space-between;
-        padding: 16px 0;
+        padding: 14px 0;
     }
 
     &__title {

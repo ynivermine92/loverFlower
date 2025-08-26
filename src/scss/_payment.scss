@@ -1,0 +1,115 @@
+.payment {
+    background-image: url("/img/payment/payment.png");
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    @media (max-width: 668px) {
+        & {
+            background-image: url("/img/payment/payment-mob.png");
+        }
+    }
+
+    .title__r {
+        span:last-child {
+            left: 10%;
+
+            &::before {
+                content: '';
+                position: absolute;
+                border: 1px solid rgba(217, 120, 172, 1);
+                max-width: 300px;
+                width: 100%;
+                left: 0;
+                top: 50%;
+            }
+
+            @media (max-width: 1330px) {
+                &::before {
+                    left: 4%;
+                    max-width: 230px;
+                }
+            }
+
+            @media (max-width: 950px) {
+                &::before {
+                    left: 4%;
+                    max-width: 180px;
+                }
+            }
+
+            @media (max-width: 720px) {
+                &::before {
+                    left: 0%;
+                    max-width: 130px;
+                }
+            }
+
+            @media (max-width: 575px) {
+                &::before {
+                    left: -7%;
+                    max-width: 100px;
+                }
+            }
+
+            @media (max-width: 500px) {
+                &::before {
+                    content: none;
+                }
+            }
+
+
+
+        }
+    }
+
+    &__wrapper {
+        padding-top: 30px
+    }
+
+    &__number {
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        color: rgba(255, 255, 255, 1);
+        font-size: 14px;
+        @extend %os-400;
+        line-height: 1.5em;
+        text-transform: uppercase;
+    }
+
+    &__link {
+        margin-top: 70px;
+        color: rgba(67, 255, 210, 1);
+        font-size: 14px;
+        @extend %os-700;
+        display: block;
+        transition: all 0.5s;
+        cursor: pointer;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            background: url(/img/checkout/text1.png);
+            width: 305px;
+            height: 215px;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            top: -60px;
+            left: 20%;
+
+            @media (max-width: 500px) {
+                width: 200px;
+            }
+        }
+
+        &:hover {
+            color: #fff;
+            transition: all 0.5s;
+        }
+    }
+}

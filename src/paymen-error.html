@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.min.css" />
+  </head>
+
+  <body class="body-paymen-error">
+    <!-- Header -->
+    @@include('./html/_header.html')
+    <!-- Main Page -->
+    <main>
+      @@include('./html/_cart.html')
+      <section class="paymen-error">
+        @@include('./html/_top-paymentError.html')
+        <div class="paymen-error__inner">
+          <div class="container">
+            <div class="paymen-error__wrapper">
+              <p class="paymen-error__text">Произошла ошибка....</p>
+
+              <p class="paymen-error__text">Попробуйте оплатить еще раз!</p>
+              <div class="paymen-error__box">
+                <a class="paymen-error__checkout" href="checkout.html"
+                  >Оплатить еще раз</a
+                >
+                <a class="paymen-error__link" href="index.html"
+                  >Вернуться на главную</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    @@include('./html/_footer.html')
+  </body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./js/scripts.min.js"></script>
+</html>

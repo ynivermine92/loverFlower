@@ -2,7 +2,7 @@
 
 
 const userBlock = document.querySelector('.header__user-items');
-const mainHome = document.querySelector('.main-home');
+const mainHome = document.querySelector('main');
 
 function burgerMenu() {
     const burger = document.querySelector('.burger')
@@ -54,33 +54,29 @@ burgerMenu()
 
 
 function fixedHeader() {
-    const sidebar = document.querySelector('.sidebar')
-    const nav = document.querySelector('.header')
+    const sidebar = document.querySelector('.sidebar');
+    const nav = document.querySelector('.header');
 
-    const breakpoint = 1
-    if (window.scrollY >= breakpoint) {
-        nav.classList.add('fixed')
-        sidebar.style.opacity = 0;
-
-        userBlock.classList.add('active')
-
-
-    } else {
-        nav.classList.remove('fixed')
-        sidebar.style.opacity = 1;
-        if (window.innerWidth > 991.98) {
-            userBlock.classList.remove('active')
+    if (window.scrollY > 0) {
+        nav.classList.add('fixed');
+        if (mainHome.classList.contains("main-home")) {
+            sidebar.style.opacity = 0;
         }
-
-
-
-
+        userBlock.classList.add('active');
+    } else {
+        nav.classList.remove('fixed');
+        if (mainHome.classList.contains("main-home")) {
+            sidebar.style.opacity = 1;
+        }
+        if (window.innerWidth > 991.98) {
+            userBlock.classList.remove('active');
+        }
     }
 }
-if (mainHome) {
-    window.addEventListener('scroll', fixedHeader)
 
-}
+window.addEventListener('scroll', fixedHeader);
+
+
 
 /**
  * Swiper 7.3.1
@@ -737,7 +733,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   /*  CartToggle */
   const cartToggle = () => {
-    let cartBtm = document.querySelectorAll('.cart__svg');
+    let cartBtm = document.querySelectorAll('.cart-user');
     let cart = document.querySelector('.cart__inner');
     let clouse = document.querySelector('.cart__clouse');
     let cartBlur = document.querySelector('.cart');
@@ -754,7 +750,6 @@ window.addEventListener("DOMContentLoaded", () => {
       })
 
     })
-
     clouse.addEventListener('click', () => {
       cart.classList.remove('active')
       document.body.classList.remove("locked")
@@ -766,6 +761,13 @@ window.addEventListener("DOMContentLoaded", () => {
 
   cartToggle()
 
+  if (document.body.classList.contains("body-payment")) {
+    const cart = document.querySelector(".header__user-cart");
+    cart.classList.add("events");
+
+  } else {
+    cart.classList.remove("events");
+  }
 
 });
 

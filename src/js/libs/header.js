@@ -1,6 +1,6 @@
 
 const userBlock = document.querySelector('.header__user-items');
-const mainHome = document.querySelector('.main-home');
+const mainHome = document.querySelector('main');
 
 function burgerMenu() {
     const burger = document.querySelector('.burger')
@@ -52,30 +52,26 @@ burgerMenu()
 
 
 function fixedHeader() {
-    const sidebar = document.querySelector('.sidebar')
-    const nav = document.querySelector('.header')
+    const sidebar = document.querySelector('.sidebar');
+    const nav = document.querySelector('.header');
 
-    const breakpoint = 1
-    if (window.scrollY >= breakpoint) {
-        nav.classList.add('fixed')
-        sidebar.style.opacity = 0;
-
-        userBlock.classList.add('active')
-
-
-    } else {
-        nav.classList.remove('fixed')
-        sidebar.style.opacity = 1;
-        if (window.innerWidth > 991.98) {
-            userBlock.classList.remove('active')
+    if (window.scrollY > 0) {
+        nav.classList.add('fixed');
+        if (mainHome.classList.contains("main-home")) {
+            sidebar.style.opacity = 0;
         }
-
-
-
-
+        userBlock.classList.add('active');
+    } else {
+        nav.classList.remove('fixed');
+        if (mainHome.classList.contains("main-home")) {
+            sidebar.style.opacity = 1;
+        }
+        if (window.innerWidth > 991.98) {
+            userBlock.classList.remove('active');
+        }
     }
 }
-if (mainHome) {
-    window.addEventListener('scroll', fixedHeader)
 
-}
+window.addEventListener('scroll', fixedHeader);
+
+

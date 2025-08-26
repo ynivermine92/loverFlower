@@ -43,13 +43,6 @@
         }
     }
 
-    .title {
-        span:first-child {
-            padding-left: 50px;
-
-        }
-    }
-
     &__box {
         display: flex;
         justify-content: center;
@@ -78,9 +71,7 @@
             margin-left: 0;
         }
 
-        span+span {
-            padding-left: 100px;
-        }
+
 
     }
 
@@ -91,30 +82,12 @@
         .title {
             font-size: 39px;
 
-            span+span {
-                padding-left: 20px;
-            }
         }
 
     }
 }
 
 
-@media (max-width:450px) {
-    .top {
-        .title {
-            span:first-child {
-                padding-left: 10px;
-
-            }
-
-            span+span {
-                padding-left: 20px;
-            }
-        }
-
-    }
-}
 
 @media (max-width:330px) {
     .bredcrumbs__separator {

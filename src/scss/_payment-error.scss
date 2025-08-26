@@ -1,0 +1,71 @@
+.paymen-error {
+
+    background-image: url("/img/paymen-error/paymen.png");
+    width: 100%;
+    height: clamp(80vh, 100vh, 100vh);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 90%;
+
+
+
+    @media (max-width: 668px) {
+        & {
+            height: clamp(80vh, 80vh, 100vh);
+            background-image: url("/img/paymen-error/paymen-mob.png");
+        }
+    }
+
+    &__wrapper {
+        padding-top: 30px
+    }
+
+
+    &__number {
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        color: rgba(255, 255, 255, 1);
+        font-size: 14px;
+        @extend %os-400;
+        line-height: 1.5em;
+        text-transform: uppercase;
+    }
+
+    &__text+&__text {
+        margin-top: 30px;
+        padding-bottom: 20px;
+    }
+
+
+    &__box {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+
+        @media (max-width:668px) {
+            flex-direction: column;
+            align-items: start;
+        }
+    }
+
+    &__checkout {
+        background: #7D2253;
+        color: #fff;
+        @extend %os-700;
+        padding: 16px 68px;
+        @extend %btn;
+        text-transform: uppercase;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    &__link {
+        text-transform: uppercase;
+        text-decoration: underline;
+        color: #fff;
+    }
+}

@@ -79,7 +79,7 @@
     display: inline-block;
 
     &:hover {
-      border: none;
+      border: 1px solid transparent;
     }
   }
 
@@ -172,6 +172,10 @@
         margin: 10px 0;
         width: 100%;
         justify-content: space-between;
+
+        span {
+          color: #fff;
+        }
 
         &:hover {
           .select__icon {
