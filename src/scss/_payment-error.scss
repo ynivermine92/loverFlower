@@ -1,5 +1,4 @@
 .paymen-error {
-
     background-image: url("/img/paymen-error/paymen.png");
     width: 100%;
     height: clamp(80vh, 100vh, 100vh);
@@ -7,9 +6,12 @@
     background-size: cover;
     background-position: center 90%;
 
+    @media (max-width: 1350px) {
+        height: clamp(80vh, 60vh, 100vh);
 
+    }
 
-    @media (max-width: 668px) {
+    @media (max-width: 1100px) {
         & {
             height: clamp(80vh, 80vh, 100vh);
             background-image: url("/img/paymen-error/paymen-mob.png");

@@ -1,5 +1,15 @@
+.body__сheckout {
+  header {
+    background-color: black;
+
+  }
+}
+
 .сheckout {
   padding-bottom: 180px;
+  object-fit: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
 
   .top__wrapper {
     position: relative;

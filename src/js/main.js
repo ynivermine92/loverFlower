@@ -24,6 +24,9 @@ window.addEventListener("DOMContentLoaded", () => {
   AOS.init({
     duration: 3000,
     once: false,
+    disable: function () {
+      return window.innerWidth < 768;
+    }
   });
 
   let swiper;
@@ -537,8 +540,6 @@ window.addEventListener("DOMContentLoaded", () => {
     const cart = document.querySelector(".header__user-cart");
     cart.classList.add("events");
 
-  } else {
-    cart.classList.remove("events");
   }
 
 });
