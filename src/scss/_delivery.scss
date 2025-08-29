@@ -1,0 +1,233 @@
+.body__delivery {
+    header {
+        background: black;
+    }
+}
+
+.delivery {
+    background-image: url("/img/delivery/delivery.png");
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 0%;
+
+    @media (max-width: 668px) {
+        & {
+            background-image: url("/img/delivery/delivery-mob.png");
+        }
+    }
+
+    &__sub-title:first-child {
+        margin-top: 50px;
+    }
+
+    &__sub-title {
+        margin: 20px 0 10px 0;
+        color: #D978AC;
+        font-size: 20px;
+        @extend %os-700;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        font-size: 20px;
+        color: #fff;
+        line-height: 1.5em;
+        @extend %os-300;
+
+        span {
+            color: #43FFD2;
+            line-height: 1.5em;
+            font-size: 20px;
+            @extend %os-300;
+        }
+    }
+
+
+    &__p {
+        padding-bottom: 100px;
+    }
+
+    .experience__sub-title {
+        text-align: start;
+        font-size: 20px;
+    }
+
+    .experience__item {
+        display: flex;
+        justify-content: center;
+    }
+
+    .experience__item::before {
+        background: rgba(107, 83, 95, 1);
+    }
+
+    &__cost {
+        margin-left: 126px;
+
+        .delivery__box {
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                border-radius: 50%;
+                height: 4px;
+                width: 4px;
+                left: -10px;
+                background: #fff;
+                top: 15px;
+            }
+        }
+    }
+
+    &__condition {
+        margin-bottom: 100px;
+
+        .delivery__box {
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                border-radius: 50%;
+                height: 4px;
+                width: 4px;
+                left: -10px;
+                background: #fff;
+                top: 15px;
+            }
+
+
+        }
+    }
+
+    &__additionally {
+
+        .delivery__box {
+            position: relative;
+            padding-left: 20px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                border-radius: 50%;
+                height: 4px;
+                width: 4px;
+                left: 10px;
+                background: #fff;
+                top: 15px;
+            }
+        }
+
+
+
+        p {
+            font-size: 20px;
+            @extend %os-300;
+        }
+    }
+
+    &__inner {
+        border-radius: 20px;
+        padding: 30px;
+        backdrop-filter: blur(20px);
+        background: rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__wrapper {
+        padding-top: 100px;
+    }
+
+    &__name {
+        color: #fff;
+        font-size: 20px;
+        @extend %os-700;
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+
+    &__time {
+        display: block;
+    }
+
+    &__additionally {
+        max-width: 962px;
+        padding-bottom: 230px;
+
+    }
+
+    &__wrapper-box {
+        margin: 20px 0;
+    }
+
+    &__link {
+        margin-top: 20px;
+        display: block;
+        color: #43FFD2;
+        transition: all 0.5s;
+
+        &:hover {
+            color: #fff;
+            transition: all 0.5s;
+        }
+    }
+
+    &__return {
+        p {
+            font-size: 20px;
+            @extend %os-300;
+        }
+
+        p+p {
+            margin-top: 30px;
+        }
+    }
+
+    @media (max-width:1000px) {
+        & {
+            &__wrapper {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+
+            &__cost {
+                margin-left: 0px;
+                padding-top: 20px;
+            }
+
+
+            &__cost,
+            &__condition {
+                p {
+                    padding-bottom: 0px;
+
+                }
+            }
+        }
+
+        &__sub-title {
+            padding: 20px 0;
+        }
+
+        &__wrapper {
+            padding-top: 50px;
+        }
+
+        &__cost {
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        &__additionally {
+            padding-bottom: 0px;
+        }
+    }
+}

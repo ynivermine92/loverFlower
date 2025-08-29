@@ -61,11 +61,16 @@
     }
 
 
-
+    &__item-etails{
+        margin-top: 0 !important;
+    }
     &__items-details {
         li {
             max-width: 160px;
+
         }
+
+
 
         li+li {
             margin-top: 20px;

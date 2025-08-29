@@ -1,0 +1,136 @@
+.body-contact {
+    header {
+        background: #000;
+
+    }
+}
+
+.contact {
+    padding-bottom: 200px;
+
+    background-image: url("/img/contact/contact.png");
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 200px;
+
+
+    .title__l span:first-child {
+        left: 14%;
+    }
+
+    .experience__items {
+        margin-top: 50px;
+
+        li::before {
+            display: none;
+        }
+
+        li {
+            display: flex;
+            justify-content: center;
+        }
+
+        span {
+            margin-bottom: 0px;
+        }
+    }
+
+    &__link {
+        font-size: 14px;
+        line-height: 1.5em;
+        color: #fff;
+        transition: all 0.5s;
+        @extend %os-300;
+
+        &:hover {
+            opacity: 0.5;
+            transition: all 0.5s;
+        }
+    }
+
+    h2 {
+
+        max-width: 530px;
+
+        span {
+
+            text-align: end;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        margin-top: 140px;
+        justify-content: space-between;
+    }
+
+    &__map {
+        margin-top: 184px;
+    }
+
+    &__map-title {
+        font-size: clamp(14px, 2vw, 20px);
+
+        color: rgba(67, 255, 210, 1);
+        @extend %os-700;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width:1100px) {
+        & {
+
+            .title__l span:first-child {
+                left: unset;
+            }
+
+            h2 {
+                max-width: 100%;
+                display: flex;
+                align-items: center;
+                font-size: clamp(40px, 6vw, 90px);
+
+                span {
+                    text-align: start;
+                }
+            }
+
+            &__wrapper {
+                flex-direction: column;
+            }
+
+            .questions__box {
+                max-width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .questions__form {
+                max-width: 500px;
+                width: 100%;
+            }
+        }
+    }
+
+    @media (max-width:1000px) {
+        & {
+            &__wrapper {
+                margin-top: 50px;
+            }
+
+            &__map {
+                margin-top: 50px;
+            }
+        }
+    }
+
+    @media (max-width:668px) {
+        & {
+            padding-bottom: 50px;
+            background-image: url("/img/contact/contact-mob.png");
+        }
+
+
+    }
+}

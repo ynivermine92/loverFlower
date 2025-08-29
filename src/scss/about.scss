@@ -1,0 +1,198 @@
+.body-about {
+    header {
+        background: #000;
+
+    }
+}
+
+
+
+.about {
+    background-image: url("/img/about/about.png");
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 200px;
+
+
+
+
+    &__wrapper {
+        margin-top: 100px;
+        margin-left: 250px;
+    }
+
+    &__wrapper:last-child {
+        padding-top: 162px;
+        margin-left: 0;
+        max-width: 800px;
+
+        h2 {
+            color: #ffff;
+        }
+
+        p {
+            margin-left: 250px;
+            max-width: 445px;
+        }
+    }
+
+    h2 {
+        color: rgba(67, 255, 210, 1);
+        @extend %co-400;
+        line-height: 1.3em;
+        font-size: clamp(28px, 6vw, 60px);
+    }
+
+    &__box {
+        h2 {
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                border: 1px solid rgba(67, 255, 210, 1);
+                width: 60px;
+                bottom: 24%;
+                left: 34%;
+            }
+        }
+    }
+
+    &__box-wrapper {
+        padding: 40px 20px 20px 40px;
+        margin-top: 100px;
+        backdrop-filter: blur(20px);
+        background: rgba(0, 0, 0, 0.2);
+        width: 120%;
+
+
+
+
+        p,
+        .about__sub-title {
+            max-width: 650px;
+        }
+
+    }
+
+    &__sub-title {
+        margin-bottom: 20px;
+        color: rgba(255, 255, 255, 1);
+        line-height: 1.5em;
+        font-size: clamp(14px, 2vw, 20px);
+        @extend %os-300;
+    }
+
+    &__text {
+
+        color: rgba(255, 255, 255, 1);
+        line-height: 1.5em;
+        font-size: clamp(14px, 2vw, 20px);
+        @extend %os-300;
+    }
+
+    &__guarant {
+        max-width: 825px;
+    }
+
+    &__wchoice {
+        max-width: 696px;
+    }
+
+    &__items {
+        margin-left: 262px;
+    }
+
+    @media (max-width: 1040px) {
+        &__box {
+            h2 {
+                &::after {
+                    left: 35%;
+                }
+            }
+        }
+
+    }
+
+    @media (max-width: 1000px) {
+        & {
+            &__wrapper {
+                margin-top: 50px;
+                margin-left: 0px;
+            }
+
+            &__items {
+                margin-left: 0px;
+            }
+
+            &__wrapper:last-child {
+
+                padding-top: 50px;
+
+                p {
+                    margin-left: 0px;
+                    max-width: 100%;
+                }
+            }
+
+            &__box-wrapper {
+
+                width: 100%;
+
+            }
+
+            h2 {
+                line-height: 1.2em;
+            }
+
+            &__box-wrapper {
+                margin-top: 50px;
+            }
+
+            &__box {
+                h2 {
+                    &::after {
+                        left: 28%;
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    @media (max-width: 668px) {
+        & {
+            background-image: url("/img/about/about-mob.png");
+
+            &__box {
+                h2 {
+
+
+                    &::after {
+                        width: 40px;
+                        left: 30%;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 450px) {
+
+        & {
+
+            &__box {
+                h2 {
+
+                    &::after {
+                        width: 30px;
+                        left: 0%;
+                        margin-left: 120px;
+                    }
+                }
+            }
+        }
+    }
+}
