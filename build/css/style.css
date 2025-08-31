@@ -210,7 +210,7 @@ body {
 .home__link:hover,
 .cart__link:hover {
   background: #ff1894;
-  color: black;
+  color: #fff;
   -webkit-box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
           box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
 }
@@ -6426,6 +6426,10 @@ body {
 
   .search__wrarpper {
     padding: 0 20px;
+  }
+
+  .search__form {
+    max-width: 400px;
   }
 
   .top .title {

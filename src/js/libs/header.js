@@ -66,7 +66,7 @@ function fixedHeader() {
         if (mainHome.classList.contains("main-home")) {
             sidebar.style.opacity = 1;
         }
-        if (window.innerWidth > 991.98) {
+        if (window.innerWidth > 991.98 && document.body.classList.contains("main__body")) {
             userBlock.classList.remove('active');
         }
     }
