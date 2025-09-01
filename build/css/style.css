@@ -1055,6 +1055,10 @@ header {
   max-width: 430px;
 }
 
+.body-paymen-error header {
+  background: #000;
+}
+
 .pagination {
   display: -webkit-box;
   display: -ms-flexbox;

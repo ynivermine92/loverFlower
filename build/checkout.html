@@ -276,7 +276,7 @@
                   <input
                     class="form__input input__tell"
                     type="tel"
-                    placeholder="+7 (977) 777-77-77"
+                    placeholder="+1 (977) 777-77-77"
                   />
                 </li>
                 <li class="сheckout__item form__box">
@@ -289,17 +289,17 @@
                 </li>
                 <li class="сheckout__item form__box">
                   <span class="form__input-name"
-                    >Телефон получателя (необязательно)</span
+                    >Телефон одержувача (необов'язково)</span
                   >
                   <input
                     class="form__input input__user-tell"
                     type="tel"
-                    placeholder="+7 (977) 777-77-77"
+                    placeholder="+1 (977) 777-77-77"
                   />
                 </li>
                 <li class="сheckout__item form__box">
                   <span class="form__input-name"
-                    >Имя получателя (необязательно)</span
+                    >Ім'я отримувача (необов'язково)</span
                   >
                   <input
                     class="form__input input__user-name"
@@ -308,7 +308,7 @@
                   />
                 </li>
                 <li class="сheckout__item form__box">
-                  <span class="form__input-name">Комментарий к заказу</span>
+                  <span class="form__input-name">Коментар до замовлення</span>
                   <input
                     class="form__input input__user-name"
                     type="text"
@@ -326,7 +326,7 @@
                       name="payment"
                       value="crypto"
                     />
-                    <span class="form__name-radio">Самовывоз</span>
+                    <span class="form__name-radio">Самовивіз</span>
                   </label>
 
                   <label>
@@ -336,12 +336,12 @@
                       name="payment"
                       value="crypto"
                     />
-                    <span class="form__name-radio">Доставка курьером</span>
+                    <span class="form__name-radio">Доставка кур'єром.</span>
                   </label>
                 </li>
 
                 <li class="сheckout__item">
-                  <span class="form__input-name">Город*</span>
+                  <span class="form__input-name">Місто*</span>
                   <div class="select">
                     <input
                       class="select__input"
@@ -350,7 +350,7 @@
                       value=""
                     />
                     <button class="select__btn">
-                      <span class="select__text">Сначала популярные</span>
+                      <span class="select__text">Спочатку популярні</span>
                       <svg
                         class="select__icon"
                         viewBox="0 0 14 7"
@@ -369,26 +369,27 @@
                     </button>
                     <ul class="select__list">
                       <li class="select__item" data-value="popular">
-                        Сначала популярные
+                    Спочатку популярні
                       </li>
                       <li class="select__item" data-value="cheaper">
-                        Сначала дешевле
+                     Спочатку дешевше
+
                       </li>
                       <li class="select__item" data-value="expensive">
-                        Сначала дороже
+                    Спочатку дорожче
                       </li>
                       <li class="select__item" data-value="high rating">
-                        Сначала с высоким рейтингом
+                   Спочатку з високим рейтингом
                       </li>
                     </ul>
                   </div>
                 </li>
                 <li class="сheckout__item form__box">
-                  <span class="form__input-name">Улица*</span>
+                  <span class="form__input-name">Вулиця*</span>
                   <input
                     class="form__input input__mail"
                     type="text"
-                    placeholder="Введите улицу"
+                    placeholder="Введіть вулицю"
                   />
                 </li>
 
@@ -402,25 +403,25 @@
                     />
                   </div>
                   <div class="сheckout__item-box">
-                    <span class="form__input-name">Дом*</span>
+                    <span class="form__input-name">Будинок*</span>
                     <input
                       class="form__input input__mail"
                       type="text"
-                      placeholder="Дом"
+                      placeholder="Будинок"
                     />
                   </div>
                   <div class="сheckout__item-box">
-                    <span class="form__input-name">Кв/офис*</span>
+                    <span class="form__input-name">Кв/офіс*</span>
                     <input
                       class="form__input input__mail"
                       type="text"
-                      placeholder="Кв/офис"
+                      placeholder="Кв/офіс"
                     />
                   </div>
                 </li>
                 <li class="сheckout__item form__box">
                   <div class="сheckout__item-box">
-                    <div class="form__input-name">Время доставки*</div>
+                    <div class="form__input-name">Час доставки*</div>
                     <input
                       class="form__input input__mail"
                       placeholder="__/__"
@@ -438,7 +439,7 @@
                       name="payment"
                       value="card"
                     />
-                    <span class="form__name-radio">Банковская карта</span>
+                    <span class="form__name-radio">Банківська картка</span>
                   </label>
 
                   <label>
@@ -448,7 +449,7 @@
                       name="payment"
                       value="cash"
                     />
-                    <span class="form__name-radio">Наличными</span>
+                    <span class="form__name-radio">Готівкою</span>
                   </label>
 
                   <label>
@@ -488,7 +489,7 @@
                       name="payment"
                       value="bank"
                     />
-                    <span class="form__name-radio">С расчетного счета</span>
+                    <span class="form__name-radio">З розрахункового рахунку</span>
                   </label>
                 </li>
               </ul>
@@ -501,16 +502,16 @@
                       type="text"
                       placeholder="Промокод"
                     />
-                    <button class="сheckout__btn">Применить</button>
+                    <button class="сheckout__btn">Застосувати</button>
                   </div>
                   <div class="сheckout__inner">
                     <div class="сheckout__total">
-                      <span>Общая сумма заказа</span>
-                      <span class="сheckout__total-price">334.00 ₽</span>
+                      <span>Загальна сума замовлення</span>
+                      <span class="сheckout__total-price">334.00 грн</span>
                     </div>
 
                     <div class="сheckout__total-discount">
-                      <span>Скидка = </span>
+                      <span>Знижка = </span>
                       <span class="сheckout__discount">0</span>
                     </div>
                     <div class="сheckout__total-delivery">
@@ -526,7 +527,7 @@
             </form>
 
             <div class="basket">
-              <div class="basket__title">Ваш заказ:</div>
+              <div class="basket__title">Ваше замовлення::</div>
               <ul class="basket__items">
                 <li class="basket__item">
                   <div class="basket__box">
@@ -537,7 +538,7 @@
                     />
 
                     <div class="basket__wrapper">
-                      <div class="basket__sub-title">рубиновые искры</div>
+                      <div class="basket__sub-title">рубінові іскри</div>
                       <div class="counter">
   <button class="counter__btn minus disabled" type="button"></button>
   <input class="counter__input" type="text" value="1" maxlength="3">
@@ -549,8 +550,8 @@
                     </div>
 
                     <div class="basket__wrapper-inner">
-                      <div class="basket__prace">160.22</div>
-                      <div class="basket__delete">Удалить</div>
+                      <div class="basket__prace">160.22грн</div>
+                      <div class="basket__delete">Видалити</div>
                     </div>
                   </div>
                 </li>
@@ -563,7 +564,7 @@
                     />
 
                     <div class="basket__wrapper">
-                      <div class="basket__sub-title">рубиновые искры</div>
+                      <div class="basket__sub-title">рубінові іскри</div>
                       <div class="counter">
                         <button
                           class="counter__btn minus disabled"
@@ -584,14 +585,14 @@
 
                     <div class="basket__wrapper-inner">
                       <div class="basket__prace">160.22</div>
-                      <div class="basket__delete">Удалить</div>
+                      <div class="basket__delete">Видалити</div>
                     </div>
                   </div>
                 </li>
               </ul>
               <div class="basket__price">
-                <p>Предварительный итог:</p>
-                <span>334.00 руб.</span>
+                <p>Попередній підсумок:</p>
+                <span>334.00 грн</span>
               </div>
             </div>
           </div>

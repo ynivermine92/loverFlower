@@ -18,12 +18,15 @@
     @@include('./html/_header.html')
     <!-- Main Page -->
     <main>
-      <section class="error-404">
+      @@include('./html/_cart.html')
+      <section data-aos="fade-left" data-aos-duration="2000" class="error-404">
         <div class="container">
           <div class="error-404__box">
             <p class="error-404__text">ПОМИЛКА 404</p>
             <p class="error-404__text">УПС... ТАКОЇ СТОРІНКИ НЕМАЄ</p>
-            <a class="error-404__link payment__link" href="index.html" >НА ГОЛОВНІЙ</a>
+            <a class="error-404__link payment__link" href="index.html"
+              >НА ГОЛОВНІЙ</a
+            >
           </div>
         </div>
       </section>
