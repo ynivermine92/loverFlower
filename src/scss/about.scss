@@ -8,7 +8,7 @@
 
 
 .about {
-    background-image: url("/img/about/about.png");
+    background-image: url("../img/about/about.png");
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -164,7 +164,7 @@
 
     @media (max-width: 668px) {
         & {
-            background-image: url("/img/about/about-mob.png");
+            background-image: url("../img/about/about-mob.png");
 
             &__box {
                 h2 {

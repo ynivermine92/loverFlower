@@ -1940,7 +1940,7 @@ header {
   height: 600px;
   top: 0%; */
   content: "";
-  background: url(/img/questions/questions.png);
+  background: url(../img/questions/questions.png);
   position: absolute;
   -o-object-fit: cover;
   object-fit: cover;
@@ -2134,7 +2134,7 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/img/social/social.png");
+  background-image: url("../img/social/social.png");
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
@@ -3330,7 +3330,7 @@ input[type=range] {
 .сheckout .top__wrapper::after {
   content: "";
   position: absolute;
-  background: url("/img/checkout/text1.png");
+  background: url("../img/checkout/text1.png");
   width: 305px;
   height: 220px;
   background-size: 100%;
@@ -3598,7 +3598,7 @@ input[type=range] {
 .сheckout__wrapper-box::before {
   content: "";
   position: absolute;
-  background: url("/img/checkout/text2.png");
+  background: url("../img/checkout/text2.png");
   width: 305px;
   height: 220px;
   background-size: 100%;
@@ -3694,7 +3694,7 @@ input[type=range] {
 }
 
 .payment {
-  background-image: url("/img/payment/payment.png");
+  background-image: url("../img/payment/payment.png");
   width: 100%;
   height: 100vh;
   background-repeat: no-repeat;
@@ -3745,7 +3745,7 @@ input[type=range] {
 .payment__link::before {
   content: "";
   position: absolute;
-  background: url(/img/checkout/text1.png);
+  background: url(../img/checkout/text1.png);
   width: 305px;
   height: 215px;
   background-repeat: no-repeat;
@@ -3763,7 +3763,7 @@ input[type=range] {
 /* page payment-error*/
 
 .paymen-error {
-  background-image: url("/img/paymen-error/paymen.png");
+  background-image: url("../img/paymen-error/paymen.png");
   width: 100%;
   height: 100vh;
   background-repeat: no-repeat;
@@ -4046,7 +4046,7 @@ input[type=range] {
 }
 
 .about {
-  background-image: url("/img/about/about.png");
+  background-image: url("../img/about/about.png");
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -4138,7 +4138,7 @@ input[type=range] {
 
 .contact {
   padding-bottom: 200px;
-  background-image: url("/img/contact/contact.png");
+  background-image: url("../img/contact/contact.png");
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -4219,7 +4219,7 @@ input[type=range] {
 }
 
 .faq {
-  background-image: url("/img/faq/faq.png");
+  background-image: url("../img/faq/faq.png");
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -5448,7 +5448,7 @@ body {
 
   .paymen-error {
     height: 80vh;
-    background-image: url("/img/paymen-error/paymen-mob.png");
+    background-image: url("../img/paymen-error/paymen-mob.png");
   }
 
   .contact .title__l span:first-child {
@@ -6244,7 +6244,7 @@ body {
 
   .questions::after {
     content: "";
-    background: url(/img/questions/questions-mob.png);
+    background: url(../img/questions/questions-mob.png);
     position: absolute;
     -o-object-fit: cover;
     object-fit: cover;
@@ -6341,7 +6341,7 @@ body {
   }
 
   .payment {
-    background-image: url("/img/payment/payment-mob.png");
+    background-image: url("../img/payment/payment-mob.png");
   }
 
   .paymen-error__box {
@@ -6359,7 +6359,7 @@ body {
   }
 
   .about {
-    background-image: url("/img/about/about-mob.png");
+    background-image: url("../img/about/about-mob.png");
   }
 
   .about__box h2::after {
@@ -6369,11 +6369,11 @@ body {
 
   .contact {
     padding-bottom: 50px;
-    background-image: url("/img/contact/contact-mob.png");
+    background-image: url("../img/contact/contact-mob.png");
   }
 
   .faq {
-    background-image: url("/img/faq/faq-mob.png");
+    background-image: url("../img/faq/faq-mob.png");
   }
 
   .footer {

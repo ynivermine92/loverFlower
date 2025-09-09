@@ -16,7 +16,7 @@
         top: 0%; */
 
         content: "";
-        background: url(/img/questions/questions.png);
+        background: url(../img/questions/questions.png);
         position: absolute;
         -o-object-fit: cover;
         object-fit: cover;
@@ -160,7 +160,7 @@
     .questions {
         &::after {
             content: "";
-            background: url(/img/questions/questions-mob.png);
+            background: url(../img/questions/questions-mob.png);
             position: absolute;
             -o-object-fit: cover;
             object-fit: cover;

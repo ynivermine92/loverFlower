@@ -9,7 +9,7 @@
 
 .faq {
 
-  background-image: url("/img/faq/faq.png");
+  background-image: url("../img/faq/faq.png");
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -31,7 +31,7 @@
 
   @media (max-width: 668px) {
     & {
-      background-image: url("/img/faq/faq-mob.png");
+      background-image: url("../img/faq/faq-mob.png");
     }
   }
 

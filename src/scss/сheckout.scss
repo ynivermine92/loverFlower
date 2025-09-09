@@ -17,7 +17,7 @@
     &::after {
       content: '';
       position: absolute;
-      background: url('/img/checkout/text1.png');
+      background: url('../img/checkout/text1.png');
       width: 305px;
       height: 220px;
       background-size: 100%;
@@ -270,7 +270,7 @@
     &::before {
       content: '';
       position: absolute;
-      background: url('/img/checkout/text2.png');
+      background: url('../img/checkout/text2.png');
       width: 305px;
       height: 220px;
       background-size: 100%;

@@ -8,7 +8,7 @@
 .contact {
     padding-bottom: 200px;
 
-    background-image: url("/img/contact/contact.png");
+    background-image: url("../img/contact/contact.png");
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -128,7 +128,7 @@
     @media (max-width:668px) {
         & {
             padding-bottom: 50px;
-            background-image: url("/img/contact/contact-mob.png");
+            background-image: url("../img/contact/contact-mob.png");
         }
 
 
