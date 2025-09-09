@@ -874,7 +874,7 @@ header {
   padding: 20px 30px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  background: url(/img/cart/cart.png);
+  background: url(../img/cart/cart.png);
   color: #fff;
   background-size: 100%;
 }
@@ -3859,7 +3859,7 @@ input[type=range] {
 }
 
 .delivery {
-  background-image: url("/img/delivery/delivery.png");
+  background-image: url("../img/delivery/delivery.png");
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -6355,7 +6355,7 @@ body {
   }
 
   .delivery {
-    background-image: url("/img/delivery/delivery-mob.png");
+    background-image: url("../img/delivery/delivery-mob.png");
   }
 
   .about {
